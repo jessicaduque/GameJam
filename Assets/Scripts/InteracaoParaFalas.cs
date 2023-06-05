@@ -84,25 +84,28 @@ public class InteracaoParaFalas : MonoBehaviour
             tempo += Time.deltaTime;
         }
 
-        if(numeroFala == pausaAntesDeFala[numeroFala])
+        if(numeroFala == pt_falas.Count)
+        {
+            AcabouFalas();
+        }
+        else if (numeroFala == pausaAntesDeFala[numeroFala])
         {
             if (tempo >= temposDasPausasAntesDasFalas[numeroFala])
             {
                 ScriptFalas();
+                DialoguePanel.SetActive(true);
             }
             else
             {
                 falaTexto.text = "";
+                DialoguePanel.SetActive(false);
             }
-        }
-        else if(numeroFala == pt_falas.Count)
-        {
-            AcabouFalas();
         }
         else
         {
             ScriptFalas();
         }
+
         /*
         if (numeroFala == 0 || numeroFala == 18)
         {
