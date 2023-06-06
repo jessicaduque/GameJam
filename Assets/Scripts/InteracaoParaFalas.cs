@@ -85,7 +85,16 @@ public class InteracaoParaFalas : MonoBehaviour
         }
         
         
-        Falante_Image.sprite = imagensFalantes[falantesDasFalas[numeroFala]];
+        if(imagensFalantes[falantesDasFalas[numeroFala]] == null)
+        {
+            Falante_Image.enabled = false;
+        }
+        else
+        {
+            Falante_Image.enabled = true;
+            Falante_Image.sprite = imagensFalantes[falantesDasFalas[numeroFala]];
+        }
+        
         NomeFalante_Text.text = falantes[falantesDasFalas[numeroFala]];
 
         LetrasUmPorUm(falas);
@@ -170,6 +179,7 @@ public class InteracaoParaFalas : MonoBehaviour
             }
             else
             {
+                DialoguePanel.SetActive(true);
                 ScriptFalas();
             }
         }
