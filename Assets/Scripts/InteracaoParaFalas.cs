@@ -200,6 +200,7 @@ public class InteracaoParaFalas : MonoBehaviour
             {
                 jaFoi = true;
             }
+            Player.GetComponent<Personagem>().CooldownPulo();
             this.enabled = false;
         }
     }

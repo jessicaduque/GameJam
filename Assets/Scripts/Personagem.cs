@@ -8,6 +8,8 @@ public class Personagem : MonoBehaviour
     private Animator Anim;
     private bool estaNoChao;
     private bool movimentoPermitido;
+    private bool cooldownPularAtivado = false;
+    private float cooldownPuloTempo = 0.0f;
     private bool recebeuInputMover;
     private bool recebeuInputPular;
     private string lado;
@@ -44,6 +46,11 @@ public class Personagem : MonoBehaviour
         AnimacaoAndar();
 
         PertoDeInteragivel();
+
+        if (cooldownPularAtivado)
+        {
+            CooldownPulo();
+        }
     }
 
     private void FixedUpdate()
@@ -141,7 +148,7 @@ public class Personagem : MonoBehaviour
     }
     void Pular()
     {
-        if (estaNoChao)
+        if (estaNoChao && !cooldownPularAtivado)
         {
             Corpo.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
             estaNoChao = false;
@@ -213,4 +220,19 @@ public class Personagem : MonoBehaviour
     {
         interagindo = false;
     }
+
+    public void CooldownPulo()
+    {
+        cooldownPuloTempo += Time.deltaTime;
+        if(cooldownPuloTempo > 0.1f)
+        {
+            cooldownPularAtivado = false;
+            cooldownPuloTempo = 0.0f;
+        }
+        else
+        {
+            cooldownPularAtivado = true;
+        }
+    }
+
 }
