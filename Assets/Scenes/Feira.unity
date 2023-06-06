@@ -226,8 +226,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20634111}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.06, y: -0.7, z: 0}
-  m_LocalScale: {x: 9, y: 4, z: 1}
+  m_LocalPosition: {x: -18.54, y: -0.7, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 274076857}
@@ -240,7 +240,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20634111}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -298,25 +298,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   en_falas:
-  - This is so depressing bruh.
-  - I don't even have a purpouse anymore.
-  - Oh yeah... I think that festival is today.
-  - Wouldn't hurt to give it a visit.
+  - How long have I been off for?
+  - The city fair is already happening? Maybe I can find someone that will help me
+    there.
   pt_falas:
-  - "Que depress\xE3o bixo."
-  - "Nem tenho mais prop\xF3sito n\xE9."
-  - "Ah \xE9... acho que aquela feira \xE9 hoje."
-  - "N\xE3o custa dar uma visitada."
-  falantesDasFalas: 00000000000000000000000000000000
+  - "H\xE1 quanto tempo eu estou desligado?"
+  - "A feira de mercadorias j\xE1 est\xE1 na cidade? Talvez l\xE1 eu encontre algu\xE9m
+    que me ajude."
+  falantesDasFalas: 0000000000000000
   falantes:
-  - Protagonista
+  - Cooper
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
-  pausaAntesDeFala: 00000000ffffffffffffffffffffffff
+  pausaAntesDeFala: 00000000ffffffff
   temposDasPausasAntesDasFalas:
   - 2
-  - 0
-  - 0
   - 0
   DialoguePanel: {fileID: 857847859}
   falaTexto: {fileID: 63810069}
@@ -772,8 +768,8 @@ Transform:
   - {fileID: 1955989061}
   - {fileID: 1441035996}
   - {fileID: 1644226540}
-  m_Father: {fileID: 1663385043}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492507724
 GameObject:
@@ -867,90 +863,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numParte: 0
   timeToFade: 3
---- !u!1 &508613066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 508613067}
-  - component: {fileID: 508613068}
-  m_Layer: 0
-  m_Name: Loja
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &508613067
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508613066}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.74, y: 2.07, z: 0}
-  m_LocalScale: {x: 20, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1663385043}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &508613068
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508613066}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.42589888, g: 0.6156085, b: 0.6698113, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.39, y: 0.19999993, z: -11}
+  m_LocalPosition: {x: -24.54, y: 0.19999993, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1594,90 +1506,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992834243}
   m_CullTransparentMesh: 1
---- !u!1 &1001257863
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1001257864}
-  - component: {fileID: 1001257866}
-  m_Layer: 0
-  m_Name: Feira
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1001257864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001257863}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.3, y: 2.5, z: 0}
-  m_LocalScale: {x: 40, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1663385043}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1001257866
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001257863}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8993979, g: 0.9528302, b: 0.46203277, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1042602141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,7 +2086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369471733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.39, y: 0.19999993, z: -11}
+  m_LocalPosition: {x: -24.54, y: 0.19999993, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3817,7 +3645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441035995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.83, y: 0.31, z: -1}
+  m_LocalPosition: {x: 52.5, y: 0.1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3863,18 +3691,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   en_falas:
-  - This festival is so crowded.
-  - I'm feeling sadder now.
+  - "There\u2019s a lot of merchants here. It\u2019s best if I go around."
   pt_falas:
-  - "Essa feira t\xE1 t\xE3o lotada...."
-  - "T\xF4 mais triste ainda agora."
-  falantesDasFalas: 0000000000000000
+  - "Tem bastante mercantes aqui. \xC9 melhor dar uma volta."
+  falantesDasFalas: 00000000
   falantes:
   - Protagonista
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
-  pausaAntesDeFala: ffffffffffffffffffffffffffffffff
-  temposDasPausasAntesDasFalas: []
+  pausaAntesDeFala: 00000000
+  temposDasPausasAntesDasFalas:
+  - 1
   DialoguePanel: {fileID: 857847859}
   falaTexto: {fileID: 63810069}
   NomeFalante_Text: {fileID: 743226851}
@@ -5682,117 +5509,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1611066884
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1611066886}
-  - component: {fileID: 1611066885}
-  - component: {fileID: 1611066887}
-  m_Layer: 0
-  m_Name: "Ch\xE3o"
-  m_TagString: Chao
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1611066885
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611066884}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: f4faf5edac7d9d74db003135c9e68296, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1611066886
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611066884}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52, y: -3.76, z: -1}
-  m_LocalScale: {x: 133.96, y: 2.7, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1663385043}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1611066887
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611066884}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1644226538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5819,7 +5535,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644226538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5872,8 +5588,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644226538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.1, y: 0.93, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 102.39, y: -0.5, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 274076857}
@@ -5892,23 +5608,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   en_falas:
-  - What an interesting poster!
-  - Maybe I can...
-  - I can finally become a human!
-  - Im should follow this adress.
+  - "\u2018Mage of Mages\u2019?"
+  - "\u2018Any problem can be cured\u2019...that\u2019s it! If this mage is as good
+    as he says, he should be able to transform me into a human!"
+  - "With that, I can go back home\u2026"
+  - "The address is \u2018Not at all mysterious house after quiet and not dangerous
+    forest\u2019."
+  - "\u2026"
+  - Seems legit!
+  - Go to the Mage of Mages house.
   pt_falas:
-  - Que poster interessante!
-  - Talvez assim...
-  - Eu possa finalmente virar humano!
-  - "Vou seguir este endere\xE7o."
-  falantesDasFalas: 00000000000000000000000000000000
+  - "\u2018Mago dos Magos\u2019? "
+  - "\u2018Curo qualquer problema\u2019...\xE9 isso! Se esse mago \xE9 t\xE3o bom
+    quanto fala, ele deve conseguir me transformar em humano!"
+  - "Assim eu vou poder voltar para casa\u2026"
+  - "O endere\xE7o \xE9 \u2018Casa nada misteriosa ap\xF3s a floresta tranquila e
+    nada perigosa\u2019."
+  - ...
+  - "Parece confi\xE1vel!"
+  - "<b>V\xE1 para a casa do Mago dos Magos.</b>"
+  falantesDasFalas: 00000000000000000000000000000000000000000000000001000000
   falantes:
-  - Protagonista
+  - Cooper
+  - 
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
-  pausaAntesDeFala: 00000000ffffffffffffffffffffffff
-  temposDasPausasAntesDasFalas:
-  - 0.7
+  pausaAntesDeFala: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  temposDasPausasAntesDasFalas: []
   DialoguePanel: {fileID: 857847859}
   falaTexto: {fileID: 63810069}
   NomeFalante_Text: {fileID: 743226851}
@@ -5917,7 +5643,7 @@ MonoBehaviour:
   jaFoi: 0
   temImagemParaMostrar: 1
   teleportarDepois: 1
-  cenaParaIr: 0
+  cenaParaIr: 4
 --- !u!114 &1644226543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5931,41 +5657,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagemParaFadePanel: {fileID: 492507724}
---- !u!1 &1663385042
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1663385043}
-  m_Layer: 0
-  m_Name: "Cen\xE1rio"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1663385043
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663385042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1611066886}
-  - {fileID: 508613067}
-  - {fileID: 1001257864}
-  - {fileID: 274076857}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1785824409
 GameObject:
   m_ObjectHideFlags: 0
@@ -22833,8 +22524,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955989060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.91, y: 0.4, z: -1}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalPosition: {x: -13.61, y: -0.52, z: -1}
+  m_LocalScale: {x: 2, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 274076857}
@@ -22905,17 +22596,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   en_falas:
-  - Wow a store much wow.
-  - I'm so sad lol.
+  - Authentic HouseKeeper 2000, no wind-up key needed?
+  - ...
+  - "Maybe if I didn\u2019t have a wind-up key, I wouldn\u2019t have been discarded
+    in that bunch of garbage."
   pt_falas:
-  - Nossa que lojinha wow wow.
-  - "Estou t\xE3o triste kkk."
-  falantesDasFalas: 0000000000000000
+  - Authentic Deluxe HouseKeeper 2000, agora sem cordas?
+  - ...
+  - "Talvez se eu n\xE3o tivesse cordas, eu n\xE3o teria sido descartado naquela
+    pilha de lixo."
+  falantesDasFalas: 000000000000000000000000
   falantes:
-  - Protagonista
+  - Cooper
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
-  pausaAntesDeFala: ffffffffffffffffffffffffffffffff
+  pausaAntesDeFala: ffffffffffffffffffffffff
   temposDasPausasAntesDasFalas: []
   DialoguePanel: {fileID: 857847859}
   falaTexto: {fileID: 63810069}
@@ -23117,6 +22812,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personagem
       objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072632, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: velAndar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: forcaPulo
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: PosInicial.x
+      value: -24.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: PosInicial.y
+      value: -1.36
+      objectReference: {fileID: 0}
     - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
       propertyPath: IndicationInteractionPanel
       value: 
@@ -23126,8 +22841,12 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4830173147998072637, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072637, guid: 14eff36228a05324690f358953cd01a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.39
+      value: -24.54
       objectReference: {fileID: 0}
     - target: {fileID: 4830173147998072637, guid: 14eff36228a05324690f358953cd01a6, type: 3}
       propertyPath: m_LocalPosition.y

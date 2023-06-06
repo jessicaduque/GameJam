@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TelaInicial.unity
+    guid: 5784f89ba213b9b45bad71686842d723
+  - enabled: 1
+    path: Assets/Scenes/Configuracoes.unity
+    guid: 2751735371fca944fae57e49ebb520b6
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 6a30692781cbe3246804a9478905f2d0
+  - enabled: 1
     path: Assets/Scenes/Feira.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Caverna.unity
+    guid: 9e42dacee7ab09d469818b0ef80d08aa
   m_configObjects: {}

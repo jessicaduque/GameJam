@@ -71,14 +71,25 @@ public class Personagem : MonoBehaviour
 
     void AnimacaoAndar()
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (movimentoPermitido)
         {
-            Anim.SetBool("Andando", true);
-    
-        }
-        else
-        {
-            Anim.SetBool("Andando", false);
+            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetAxis("Horizontal") != 0) && (!Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Run") == 0))
+            {
+                Anim.SetBool("Correndo", false);
+                Anim.SetBool("Andando", true);
+
+            }
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetAxis("Horizontal") != 0) && (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") > 0))
+            {
+                Anim.SetBool("Andando", false);
+                Anim.SetBool("Correndo", true);
+            }
+            else
+            {
+                Anim.SetBool("Correndo", false);
+                Anim.SetBool("Andando", false);
+            }
+
         }
     }
     void ReceberInputs()
@@ -102,12 +113,10 @@ public class Personagem : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") > 0)
         {
             velFinal = velAndar * 2;
-            Anim.SetBool("Correndo", true);
         }
         else
         {
             velFinal = velAndar;
-            Anim.SetBool("Correndo", false);
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0))
@@ -148,7 +157,7 @@ public class Personagem : MonoBehaviour
 
         foreach (GameObject interagivel in Interagiveis)
         {
-            if(Vector2.Distance(transform.position, interagivel.transform.position) <= 5)
+            if(Vector2.Distance(transform.position, interagivel.transform.position) <= 4)
             {
                 maisPerto = interagivel;
             }
@@ -187,6 +196,9 @@ public class Personagem : MonoBehaviour
     public void PrenderPersonagem()
     {
         movimentoPermitido = false;
+        Corpo.velocity = new Vector3(0, Corpo.velocity.y, 0);
+        Anim.SetBool("Correndo", false);
+        Anim.SetBool("Andando", false);
     }
     public void DesprenderPersonagem()
     {
