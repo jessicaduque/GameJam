@@ -16,6 +16,8 @@ public class InteracaoParaFalas : MonoBehaviour
 
     private int numeroFala = 0;
     private float tempo = 0.0f;
+    private float tempoLetras = 0.0f;
+    private int letra = 1;
     private bool falasRodando;
     private GameObject Player;
 
@@ -66,35 +68,49 @@ public class InteracaoParaFalas : MonoBehaviour
 
     void ScriptFalas()
     {
-        if(PlayerPrefs.GetInt("Lingua") == 0)
+        List<string> falas = null;
+        
+        if (PlayerPrefs.GetInt("Lingua") == 0)
         {
-            falaTexto.text = pt_falas[numeroFala];
+            falas = pt_falas;
         }
         else if (PlayerPrefs.GetInt("Lingua") == 1)
         {
-            falaTexto.text = en_falas[numeroFala];
+            falas = en_falas;
         }
+        
         
         Falante_Image.sprite = imagensFalantes[falantesDasFalas[numeroFala]];
         NomeFalante_Text.text = falantes[falantesDasFalas[numeroFala]];
 
+        tempoLetras += Time.deltaTime;
+
+        if(tempoLetras > 0.05 * letra && letra != falas[numeroFala].Length + 1)
+        {
+            falaTexto.text = falas[numeroFala].Substring(0, letra);
+            letra++;
+        }
+        //NomeFalante_Text.text = falantes[falantesDasFalas[numeroFala]];
+
         // Falas
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
-            if (tempo > 0.4f)
+            if (letra != falas[numeroFala].Length + 1)
             {
-                if (numeroFala == 0)
+                falaTexto.text = falas[numeroFala];
+                letra = falas[numeroFala].Length + 1;
+            }
+            else
+            {
+                if (tempo > 0.4f)
                 {
-                    if (tempo > 1f)
+                    if (numeroFala != falas.Count)
                     {
+                        tempoLetras = 0.0f;
+                        letra = 1;
                         tempo = 0.0f;
                         numeroFala++;
                     }
-                }
-                else
-                {
-                    tempo = 0.0f;
-                    numeroFala++;
                 }
             }
         }
