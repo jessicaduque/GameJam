@@ -8,8 +8,6 @@ public class Fade : MonoBehaviour
     private CanvasGroup canvasGroup;
     private  bool fadeIn = false;
     private bool fadeOut = false;
-    [SerializeField]
-    private int numParte;
 
     [SerializeField] float timeToFade;
 
@@ -46,7 +44,6 @@ public class Fade : MonoBehaviour
                 canvasGroup.alpha -= timeToFade * Time.deltaTime;
                 if (canvasGroup.alpha == 0)
                 {
-                    GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorCena>().fezAlgumaParte(numParte);
                     this.gameObject.SetActive(false);
                 }
             }

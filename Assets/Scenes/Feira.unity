@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 20634113}
   - component: {fileID: 20634114}
   m_Layer: 0
-  m_Name: "Lix\xE3o"
+  m_Name: Inicial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,9 @@ MonoBehaviour:
   - "A feira de mercadorias j\xE1 est\xE1 na cidade? Talvez l\xE1 eu encontre algu\xE9m
     que me ajude."
   falantesDasFalas: 0000000000000000
-  falantes:
+  en_falantes:
+  - Cooper
+  pt_falantes:
   - Cooper
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
@@ -895,7 +897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f749df95f041049abe51b8572ea9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numParte: 0
   timeToFade: 3
 --- !u!1 &519420028
 GameObject:
@@ -1433,8 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f6b399bc1c87741a8f07e7710a1783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lixeira: {fileID: 20634111}
-  Posters: {fileID: 1644226538}
+  ObjetoInicial: {fileID: 20634111}
 --- !u!4 &944807036
 Transform:
   m_ObjectHideFlags: 0
@@ -3728,8 +3728,10 @@ MonoBehaviour:
   pt_falas:
   - "Tem bastante mercantes aqui. \xC9 melhor dar uma volta."
   falantesDasFalas: 00000000
-  falantes:
-  - Protagonista
+  en_falantes:
+  - Cooper
+  pt_falantes:
+  - Cooper
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
   pausaAntesDeFala: 00000000
@@ -5661,7 +5663,10 @@ MonoBehaviour:
   - "Parece confi\xE1vel!"
   - "V\xE1 para a casa do Mago dos Magos."
   falantesDasFalas: 00000000000000000000000000000000000000000000000001000000
-  falantes:
+  en_falantes:
+  - Cooper
+  - 
+  pt_falantes:
   - Cooper
   - 
   imagensFalantes:
@@ -22469,7 +22474,9 @@ MonoBehaviour:
   - "Talvez se eu n\xE3o tivesse cordas, eu n\xE3o teria sido descartado naquela
     pilha de lixo."
   falantesDasFalas: 000000000000000000000000
-  falantes:
+  en_falantes:
+  - Cooper
+  pt_falantes:
   - Cooper
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}

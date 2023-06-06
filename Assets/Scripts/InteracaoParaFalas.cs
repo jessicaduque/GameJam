@@ -9,7 +9,8 @@ public class InteracaoParaFalas : MonoBehaviour
     [SerializeField] private List<string> en_falas = new List<string>();
     [SerializeField] private List<string> pt_falas = new List<string>();
     [SerializeField] private List<int> falantesDasFalas = new List<int>();
-    [SerializeField] private List<string> falantes = new List<string>();
+    [SerializeField] private List<string> en_falantes = new List<string>();
+    [SerializeField] private List<string> pt_falantes = new List<string>();
     [SerializeField] private List<Sprite> imagensFalantes = new List<Sprite>();
 
     [SerializeField] private List<int> pausaAntesDeFala = new List<int>();
@@ -74,14 +75,17 @@ public class InteracaoParaFalas : MonoBehaviour
     void ScriptFalas()
     {
         List<string> falas = null;
-        
+        List<string> falantes = null;
+
         if (PlayerPrefs.GetInt("Lingua") == 0)
         {
             falas = pt_falas;
+            falantes = pt_falantes;
         }
         else if (PlayerPrefs.GetInt("Lingua") == 1)
         {
             falas = en_falas;
+            falantes = en_falantes;
         }
         
         

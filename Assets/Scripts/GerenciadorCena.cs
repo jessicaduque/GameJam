@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class GerenciadorCena : MonoBehaviour
 {
-    private bool visualizouPosters;
     private GameObject Player;
     [SerializeField]
-    private GameObject Lixeira;
-    [SerializeField]
-    private GameObject Posters;
+    private GameObject ObjetoInicial;
 
     void Start()
     {
-        Lixeira.GetComponent<InteracaoParaFalas>().enabled = true;
-        visualizouPosters = false;
+        ObjetoInicial.GetComponent<InteracaoParaFalas>().enabled = true;
+        // Deletar lingua depois
         PlayerPrefs.SetInt("Lingua", 0);
     }
 
@@ -23,12 +20,4 @@ public class GerenciadorCena : MonoBehaviour
         
     }
 
-    public void fezAlgumaParte(int num)
-    {
-        if(num == 0)
-        {
-            Posters.GetComponent<InteracaoParaFalas>().enabled = true;
-            visualizouPosters = true;
-        }
-    }
 }
