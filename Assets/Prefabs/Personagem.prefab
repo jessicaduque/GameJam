@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4830173147998072636}
   m_Layer: 0
   m_Name: Personagem
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4830173147998072632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.39, y: -1.36, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4830173148943860666}
@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb97649cadb2f5149a851c0401aea118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velAndar: 5
-  forcaPulo: 7
+  velAndar: 3
+  forcaPulo: 6
   maisPerto: {fileID: 0}
-  PosInicial: {x: -2.28, y: -1.92, z: -1}
+  PosInicial: {x: -24.54, y: -1.36, z: -1}
   IndicationInteractionPanel: {fileID: 0}
 --- !u!1 &4830173148943860667
 GameObject:

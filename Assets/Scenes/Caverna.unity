@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personagem
       objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072632, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
       propertyPath: PosInicial.x
       value: -11.75
@@ -429,64 +433,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   en_falas:
-  - "\u2018Mage of Mages\u2019?"
-  - "\u2018Any problem can be cured\u2019...that\u2019s it! If this mage is as good
-    as he says, he should be able to transform me into a human!"
-  - "With that, I can go back home\u2026"
-  - "The address is \u2018Not at all mysterious house after quiet and not dangerous
-    forest\u2019."
-  - "\u2026"
-  - Seems legit!
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
-  - Go to the Mage of Mages house.
+  - HEY!
+  - "What do you think you\u2019re doing?!"
+  - "Did you know there\u2019s no bigger lack of respect than waking others in the
+    middle of their sleep?!"
+  - "Forgive me\u2026"
+  - "It\u2019s just that I\u2019m looking for the Ultra Mega Powerful Dragon that
+    lives in this cave, would you know where he is?"
+  - "\u2018Ultra Mega Powerful Dragon\u2019? What an idiotic name!"
+  - "There isn\u2019t anyone with a title like that living in this cave."
+  - Only I reside here.
+  - "So it\u2019s you!"
+  - Well, Mr. Drago-
+  - MS. Dragon.
+  - Yes, Ms. Dragon.
+  - "I\u2019ve come here because I need one of your skates to help me become a human."
+  - You mean a scale?
+  - "Why didn\u2019t you just say so? I have a bunch of them!"
+  - Here, take one.
+  - "Thank you very much! I\u2019ll try to not interrupt your sacred sleep anymore."
+  - Good thing you understood.
+  - You have acquired a scale from Ms. Dragon.
+  - "I\u2019ll go back to the mage now."
   pt_falas:
-  - "\u2018Mago dos Magos\u2019? "
-  - "\u2018Curo qualquer problema\u2019...\xE9 isso! Se esse mago \xE9 t\xE3o bom
-    quanto fala, ele deve conseguir me transformar em humano!"
-  - "Assim eu vou poder voltar para casa\u2026"
-  - "O endere\xE7o \xE9 \u2018Casa nada misteriosa ap\xF3s a floresta tranquila e
-    nada perigosa\u2019."
-  - ...
-  - "Parece confi\xE1vel!"
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  - "V\xE1 para a casa do Mago dos Magos."
-  falantesDasFalas: 0000000000000000000000000000000000000000000000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-  en_falantes: []
-  pt_falantes: []
+  - EI!
+  - "O que voc\xEA acha que est\xE1 fazendo?!"
+  - "Sabia que \xE9 a maior falta de respeito do mundo acordar os outros enquanto
+    dormem?!?"
+  - "Me perdoe\u2026"
+  - "\xC9 que estou procurando o Drag\xE3o Ultra Mega Poderoso que mora nessa caverna,
+    saberia onde ele est\xE1?"
+  - "\u2018Drag\xE3o Ultra Mega Poderoso\u2019? Que nome idiota!"
+  - "N\xE3o existe ningu\xE9m com um t\xEDtulo assim morando nesta caverna."
+  - Apenas eu resido aqui.
+  - "Ent\xE3o \xE9 voc\xEA!"
+  - "Bem, Senhor Drag\xE3-"
+  - "SENHORA Drag\xE3o."
+  - "Sim, senhora Drag\xE3o."
+  - Eu vim aqui pois eu preciso um de seus esquemas para me ajudar a virar um humano.
+  - Uma escama?
+  - "Porque voc\xEA n\xE3o disse antes? Eu tenho v\xE1rias delas!"
+  - Toma, pegue uma.
+  - "Muito obrigado! Vou tentar n\xE3o atrapalhar mais seu sagrado sono."
+  - Fico feliz que tenha entendido.
+  - "Voc\xEA adquiriu uma escama da Senhora Drag\xE3o."
+  - Vou voltar ao mago agora.
+  falantesDasFalas: 0200000002000000020000000000000000000000020000000200000002000000000000000000000003000000000000000000000002000000030000000300000000000000030000000100000000000000
+  en_falantes:
+  - Cooper
+  - 
+  - Dragon
+  - Ms. Dragon
+  pt_falantes:
+  - Cooper
+  - 
+  - "Drag\xE3o"
+  - "Senhora Drag\xE3o"
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
   - {fileID: 0}
-  pausaAntesDeFala: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  - {fileID: 21300000, guid: bf2d671548c9d194dbbde7fbd1035907, type: 3}
+  - {fileID: 21300000, guid: bf2d671548c9d194dbbde7fbd1035907, type: 3}
+  pausaAntesDeFala: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   temposDasPausasAntesDasFalas: []
-  DialoguePanel: {fileID: 0}
-  falaTexto: {fileID: 0}
-  NomeFalante_Text: {fileID: 0}
-  Falante_Image: {fileID: 0}
-  podeRepetir: 0
+  DialoguePanel: {fileID: 597112158}
+  falaTexto: {fileID: 344696172}
+  NomeFalante_Text: {fileID: 1309400771}
+  Falante_Image: {fileID: 2051927392}
+  podeRepetir: 1
   jaFoi: 0
   temImagemParaMostrar: 0
   teleportarDepois: 1
@@ -666,7 +680,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597112158
 GameObject:
@@ -1216,7 +1230,7 @@ RectTransform:
   - {fileID: 657614855}
   - {fileID: 972268712}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3897,7 +3911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1752262378
 Transform:
   m_ObjectHideFlags: 0
@@ -30920,8 +30934,12 @@ MonoBehaviour:
   - ...
   - "Procure a escama do Drag\xE3o Ultra Mega Poderoso."
   falantesDasFalas: 0000000001000000
-  en_falantes: []
-  pt_falantes: []
+  en_falantes:
+  - Cooper
+  - 
+  pt_falantes:
+  - Cooper
+  - 
   imagensFalantes:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
   - {fileID: 0}
