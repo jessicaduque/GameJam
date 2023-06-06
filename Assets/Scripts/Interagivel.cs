@@ -65,7 +65,6 @@ public class Interagivel : MonoBehaviour
         }
         else
         {
-            IndicateInteractionPanel.SetActive(false);
             return false;
         }
     }

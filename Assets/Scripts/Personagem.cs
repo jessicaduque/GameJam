@@ -16,6 +16,9 @@ public class Personagem : MonoBehaviour
     [SerializeField] 
     private Vector3 PosInicial;
 
+    [SerializeField]
+    GameObject IndicationInteractionPanel;
+
     void Start()
     {
         estaNoChao = true;
@@ -76,8 +79,24 @@ public class Personagem : MonoBehaviour
     {
         if (estaNoChao && (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0)))
         {
-            Corpo.AddForce(Vector2.up * forcaPulo);
+            Corpo.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
             estaNoChao = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "InteragivelFalas")
+        {
+            IndicationInteractionPanel.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "InteragivelFalas")
+        {
+            IndicationInteractionPanel.SetActive(false);
         }
     }
 
@@ -86,6 +105,15 @@ public class Personagem : MonoBehaviour
         if (colidiu.gameObject.tag == "Chao")
         {
             estaNoChao = true;
+        }
+
+        if (colidiu.gameObject.tag == "InteragivelFalas")
+        {
+            if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.JoystickButton3))
+            {
+                IndicationInteractionPanel.SetActive(false);
+                colidiu.gameObject.GetComponent<InteracaoParaFalas>().enabled = true;
+            }
         }
     }
 
