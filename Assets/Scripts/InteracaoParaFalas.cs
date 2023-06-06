@@ -14,7 +14,7 @@ public class InteracaoParaFalas : MonoBehaviour
     [SerializeField] private List<int> pausaAntesDeFala = new List<int>();
     [SerializeField] private List<float> temposDasPausasAntesDasFalas = new List<float>();
 
-    private int numeroFala;
+    private int numeroFala = 0;
     private float tempo = 0.0f;
     private bool falasRodando;
     private GameObject Player;
@@ -24,10 +24,9 @@ public class InteracaoParaFalas : MonoBehaviour
     public Text NomeFalante_Text;
     public Image Falante_Image;
 
-    [SerializeField]
-    private bool podeRepetir;
-    [SerializeField]
-    private bool temImagemParaMostrar;
+    public bool podeRepetir;
+    public bool jaFoi = false;
+    public bool temImagemParaMostrar;
     private bool mostrandoImagem;
 
     // Start is called before the first frame update
@@ -152,6 +151,10 @@ public class InteracaoParaFalas : MonoBehaviour
         DialoguePanel.SetActive(false);
         Player.GetComponent<Personagem>().DesprenderPersonagem();
         Player.GetComponent<Personagem>().AcabouInteracao();
+        if (!podeRepetir)
+        {
+            jaFoi = true;
+        }
         this.enabled = false;
     }
 

@@ -105,13 +105,21 @@ public class Personagem : MonoBehaviour
             }
         }
 
-        if (maisPerto != null && !interagindo)
+        if (maisPerto != null && !interagindo && (!maisPerto.GetComponent<InteracaoParaFalas>().jaFoi || maisPerto.GetComponent<InteracaoParaFalas>().temImagemParaMostrar))
         {
-            IndicationInteractionPanel.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.JoystickButton3))
+            if (!maisPerto.GetComponent<InteracaoParaFalas>().podeRepetir && !maisPerto.GetComponent<InteracaoParaFalas>().temImagemParaMostrar)
             {
                 maisPerto.GetComponent<InteracaoParaFalas>().enabled = true;
             }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.JoystickButton3))
+                {
+                    maisPerto.GetComponent<InteracaoParaFalas>().enabled = true;
+                }
+                IndicationInteractionPanel.SetActive(true);
+            }
+          
         }
         else
         {
