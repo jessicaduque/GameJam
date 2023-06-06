@@ -74,6 +74,7 @@ public class Personagem : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             Anim.SetBool("Andando", true);
+    
         }
         else
         {
@@ -101,10 +102,12 @@ public class Personagem : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") > 0)
         {
             velFinal = velAndar * 2;
+            Anim.SetBool("Correndo", true);
         }
         else
         {
             velFinal = velAndar;
+            Anim.SetBool("Correndo", false);
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0))
@@ -117,12 +120,12 @@ public class Personagem : MonoBehaviour
     {
         if (lado == "direita")
         {
-            Corpo.velocity = new Vector3(-velocidade, Corpo.velocity.y, 0);
-            transform.localScale = new Vector3(1, 1, 1);
+            Corpo.velocity = new Vector3(velocidade, Corpo.velocity.y, 0);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (lado == "esquerda")
         {
-            Corpo.velocity = new Vector3(velocidade, Corpo.velocity.y, 0);
+            Corpo.velocity = new Vector3(-velocidade, Corpo.velocity.y, 0);
             transform.localScale = new Vector3(1, 1, 1);
         }
 
