@@ -83,16 +83,14 @@ public class InteracaoParaFalas : MonoBehaviour
         Falante_Image.sprite = imagensFalantes[falantesDasFalas[numeroFala]];
         NomeFalante_Text.text = falantes[falantesDasFalas[numeroFala]];
 
-        tempoLetras += Time.deltaTime;
+        LetrasUmPorUm(falas);
 
-        if(tempoLetras > 0.05 * letra && letra != falas[numeroFala].Length + 1)
-        {
-            falaTexto.text = falas[numeroFala].Substring(0, letra);
-            letra++;
-        }
-        //NomeFalante_Text.text = falantes[falantesDasFalas[numeroFala]];
+        CliqueDoMouse(falas);
+        
+    }
 
-        // Falas
+    void CliqueDoMouse(List<string> falas)
+    {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             if (letra != falas[numeroFala].Length + 1)
@@ -113,6 +111,17 @@ public class InteracaoParaFalas : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    void LetrasUmPorUm(List<string> falas)
+    {
+        tempoLetras += Time.deltaTime;
+
+        if (tempoLetras > 0.05 * letra && letra != falas[numeroFala].Length + 1)
+        {
+            falaTexto.text = falas[numeroFala].Substring(0, letra);
+            letra++;
         }
     }
 
@@ -160,7 +169,6 @@ public class InteracaoParaFalas : MonoBehaviour
             }
         }
     }
-
 
     void AcabouFalas()
     {
