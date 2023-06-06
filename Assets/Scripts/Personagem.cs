@@ -12,6 +12,9 @@ public class Personagem : MonoBehaviour
     private float velAndar;
     [SerializeField]
     private float forcaPulo;
+    private bool interagindo;
+
+    public GameObject maisPerto = null;
 
     [SerializeField] 
     private Vector3 PosInicial;
@@ -23,6 +26,7 @@ public class Personagem : MonoBehaviour
     {
         estaNoChao = true;
         movimentoPermitido = true;
+        interagindo = false;
 
         Corpo = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
@@ -36,6 +40,8 @@ public class Personagem : MonoBehaviour
             Movimento();
             Pular();
         }
+
+        PertoDeInteragivel();
     }
 
     void Movimento()
@@ -84,17 +90,30 @@ public class Personagem : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    void PertoDeInteragivel()
     {
-        if(collider.gameObject.tag == "InteragivelFalas")
+        maisPerto = null;
+
+        GameObject[] Interagiveis;
+        Interagiveis = GameObject.FindGameObjectsWithTag("InteragivelFalas");
+
+        foreach (GameObject interagivel in Interagiveis)
+        {
+            if(Vector2.Distance(transform.position, interagivel.transform.position) <= 5)
+            {
+                maisPerto = interagivel;
+            }
+        }
+
+        if (maisPerto != null && !interagindo)
         {
             IndicationInteractionPanel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.JoystickButton3))
+            {
+                maisPerto.GetComponent<InteracaoParaFalas>().enabled = true;
+            }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.gameObject.tag == "InteragivelFalas")
+        else
         {
             IndicationInteractionPanel.SetActive(false);
         }
@@ -106,15 +125,6 @@ public class Personagem : MonoBehaviour
         {
             estaNoChao = true;
         }
-
-        if (colidiu.gameObject.tag == "InteragivelFalas")
-        {
-            if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.JoystickButton3))
-            {
-                IndicationInteractionPanel.SetActive(false);
-                colidiu.gameObject.GetComponent<InteracaoParaFalas>().enabled = true;
-            }
-        }
     }
 
     public void PrenderPersonagem()
@@ -124,5 +134,14 @@ public class Personagem : MonoBehaviour
     public void DesprenderPersonagem()
     {
         movimentoPermitido = true;
+    }
+    public void ComecouInteracao()
+    {
+        interagindo = true;
+    }
+
+    public void AcabouInteracao()
+    {
+        interagindo = false;
     }
 }

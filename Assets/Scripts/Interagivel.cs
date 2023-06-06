@@ -9,6 +9,48 @@ public class Interagivel : MonoBehaviour
     private GameObject ImageToShowPanel;
     [SerializeField]
     private GameObject IndicateInteractionPanel;
+    private bool imagemParaMostrar;
+    GameObject objetoInteragivel;
+
+    private void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        objetoInteragivel = Player.GetComponent<Personagem>().maisPerto;
+        if (objetoInteragivel.GetComponent<IniciarFadesImagem>())
+        {
+            imagemParaMostrar = true;
+        }
+        else
+        {
+            imagemParaMostrar = false;
+        }
+    }
+
+    private void Update()
+    {
+        Interacao();
+    }
+
+    void Interacao()
+    {
+        Player.GetComponent<Personagem>().AcabouInteracao();
+        Player.GetComponent<Personagem>().PrenderPersonagem();
+        if (imagemParaMostrar)
+        {
+            ImageToShowPanel.SetActive(true);
+        }
+        else
+        {
+            GetComponent<InteracaoParaFalas>().enabled = true;
+        }
+    }
+
+    /*
+    private GameObject Player;
+    [SerializeField]
+    private GameObject ImageToShowPanel;
+    [SerializeField]
+    private GameObject IndicateInteractionPanel;
     [SerializeField]
     private float DistanciaParaInteracao;
     private bool podeInteragir;
@@ -75,4 +117,5 @@ public class Interagivel : MonoBehaviour
         ImageToShowPanel.SetActive(true);
         Player.GetComponent<Personagem>().PrenderPersonagem();
     }
+    */
 }

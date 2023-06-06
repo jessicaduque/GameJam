@@ -15,18 +15,18 @@ public class Fade : MonoBehaviour
 
     private void Start()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup = GetComponentInChildren<CanvasGroup>();
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnEnable()
     {
+        fadeIn = false;
         fadeOut = false;
     }
 
     void Update()
     {
-
         if (fadeIn)
         {
             if (canvasGroup.alpha < 1)
@@ -46,9 +46,8 @@ public class Fade : MonoBehaviour
                 canvasGroup.alpha -= timeToFade * Time.deltaTime;
                 if (canvasGroup.alpha == 0)
                 {
-                    Player.GetComponent<Personagem>().DesprenderPersonagem();
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorCena>().fezAlgumaParte(numParte);
-                    this.transform.parent.gameObject.SetActive(false);
+                    this.gameObject.SetActive(false);
                 }
             }
         }

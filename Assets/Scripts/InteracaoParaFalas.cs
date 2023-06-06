@@ -24,14 +24,39 @@ public class InteracaoParaFalas : MonoBehaviour
     public Text NomeFalante_Text;
     public Image Falante_Image;
 
+    [SerializeField]
+    private bool podeRepetir;
+    [SerializeField]
+    private bool temImagemParaMostrar;
+    private bool mostrandoImagem;
+
     // Start is called before the first frame update
     void Start()
+    {
+        
+    }
+
+    private void OnEnable()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Player.GetComponent<Personagem>().PrenderPersonagem();
         falaTexto.text = "";
         falasRodando = true;
-        DialoguePanel.SetActive(true);
+        if (podeRepetir)
+        {
+            numeroFala = 0;
+        }
+
+        if (temImagemParaMostrar)
+        {
+            mostrandoImagem = true;
+            DialoguePanel.SetActive(false);
+        }
+        else
+        {
+            mostrandoImagem = false;
+            DialoguePanel.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -78,58 +103,47 @@ public class InteracaoParaFalas : MonoBehaviour
 
     void ControleFalas()
     {
-
         if (falasRodando)
         {
             tempo += Time.deltaTime;
         }
 
-        if(numeroFala == pt_falas.Count)
+        if (mostrandoImagem)
+        {
+            Player.GetComponent<Personagem>().ComecouInteracao();
+            GetComponent<IniciarFadesImagem>().enabled = true;
+            if (!GetComponent<IniciarFadesImagem>().imagemParaFadePanel.activeSelf)
+            {
+                mostrandoImagem = false;
+            }
+        }
+        else if(numeroFala == pt_falas.Count)
         {
             AcabouFalas();
         }
-        else if (numeroFala == pausaAntesDeFala[numeroFala])
+        else
         {
-            if (tempo >= temposDasPausasAntesDasFalas[numeroFala])
+            Player.GetComponent<Personagem>().PrenderPersonagem();
+            Player.GetComponent<Personagem>().ComecouInteracao();
+
+            if (numeroFala == pausaAntesDeFala[numeroFala])
             {
-                ScriptFalas();
-                DialoguePanel.SetActive(true);
+                if (tempo >= temposDasPausasAntesDasFalas[numeroFala])
+                {
+                    ScriptFalas();
+                    DialoguePanel.SetActive(true);
+                }
+                else
+                {
+                    falaTexto.text = "";
+                    DialoguePanel.SetActive(false);
+                }
             }
             else
             {
-                falaTexto.text = "";
-                DialoguePanel.SetActive(false);
-            }
-        }
-        else
-        {
-            ScriptFalas();
-        }
-
-        /*
-        if (numeroFala == 0 || numeroFala == 18)
-        {
-            Debug.Log(tempo);
-            if (tempo >= 1f)
-            {
-                DialoguePanel.SetActive(true);
                 ScriptFalas();
             }
         }
-        else if (numeroFala == 17)
-        {
-            AcabouFalas();
-        }
-        else if (numeroFala == 21)
-        {
-            PlayerPrefs.SetInt("FASE2", 2);
-            AcabouFalas();
-        }
-        else
-        {
-            ScriptFalas();
-        }
-        */
     }
 
 
@@ -137,6 +151,13 @@ public class InteracaoParaFalas : MonoBehaviour
     {
         DialoguePanel.SetActive(false);
         Player.GetComponent<Personagem>().DesprenderPersonagem();
+        Player.GetComponent<Personagem>().AcabouInteracao();
         this.enabled = false;
     }
+
+    public void MostrouImagem()
+    {
+        mostrandoImagem = false;
+    }
+
 }

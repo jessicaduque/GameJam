@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IniciarFadesImagem : MonoBehaviour
 {
+    public GameObject imagemParaFadePanel;
+
     void Start()
     {
         
@@ -11,8 +13,10 @@ public class IniciarFadesImagem : MonoBehaviour
 
     private void OnEnable()
     {
-        GetComponentInChildren<Fade>().FadeIn();
+        imagemParaFadePanel.SetActive(true);
+        imagemParaFadePanel.GetComponent<Fade>().FadeIn();
     }
+
 
     void Update()
     {
@@ -23,7 +27,11 @@ public class IniciarFadesImagem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {
-            GetComponentInChildren<Fade>().FadeOut();
+            imagemParaFadePanel.GetComponent<Fade>().FadeOut();
+        }
+        if (!imagemParaFadePanel.activeSelf)
+        {
+            this.enabled = false;
         }
     }
 

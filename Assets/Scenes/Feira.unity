@@ -322,6 +322,8 @@ MonoBehaviour:
   falaTexto: {fileID: 63810069}
   NomeFalante_Text: {fileID: 743226851}
   Falante_Image: {fileID: 271947680}
+  podeRepetir: 0
+  temImagemParaMostrar: 0
 --- !u!1 &63810067
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +526,6 @@ GameObject:
   - component: {fileID: 215388571}
   - component: {fileID: 215388573}
   - component: {fileID: 215388572}
-  - component: {fileID: 215388575}
   - component: {fileID: 215388574}
   m_Layer: 5
   m_Name: PostersImage
@@ -603,20 +604,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &215388575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215388570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f749df95f041049abe51b8572ea9db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numParte: 0
-  timeToFade: 3
 --- !u!1 &271947678
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,9 +801,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 492507724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04fbc5217279554499a0be71578b79f, type: 3}
+  m_Script: {fileID: 11500000, guid: 92f749df95f041049abe51b8572ea9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numParte: 0
+  timeToFade: 3
 --- !u!1 &508613066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1602,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1001257864}
   - component: {fileID: 1001257866}
-  - component: {fileID: 1001257865}
   m_Layer: 0
   m_Name: Feira
   m_TagString: Untagged
@@ -1636,43 +1624,6 @@ Transform:
   m_Father: {fileID: 1663385043}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1001257865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001257863}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472d972621b10fb499bcd5cfb794e325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  en_falas:
-  - This is so depressing bruh.
-  - I don't even have a purpouse anymore.
-  - Oh yeah... I think that festival is today.
-  - Wouldn't hurt to give it a visit.
-  pt_falas:
-  - "Que depress\xE3o bixo."
-  - "Nem tenho mais prop\xF3sito n\xE9."
-  - "Ah \xE9... acho que aquela feira \xE9 hoje."
-  - "N\xE3o custa dar uma visitada."
-  falantesDasFalas: 00000000000000000000000000000000
-  falantes:
-  - Protagonista
-  imagensFalantes:
-  - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
-  pausaAntesDeFala: 00000000ffffffffffffffffffffffff
-  temposDasPausasAntesDasFalas:
-  - 2
-  - 0
-  - 0
-  - 0
-  DialoguePanel: {fileID: 857847859}
-  falaTexto: {fileID: 63810069}
-  NomeFalante_Text: {fileID: 743226851}
-  Falante_Image: {fileID: 271947680}
 --- !u!212 &1001257866
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1940,11 +1891,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1644226540}
   - component: {fileID: 1644226539}
-  - component: {fileID: 1644226541}
   - component: {fileID: 1644226542}
+  - component: {fileID: 1644226543}
   m_Layer: 0
   m_Name: Poster
-  m_TagString: Untagged
+  m_TagString: InteragivelFalas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2016,21 +1967,6 @@ Transform:
   m_Father: {fileID: 274076857}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1644226541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644226538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ef5f446f6d527b4f814675c997a5d3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ImageToShowPanel: {fileID: 492507724}
-  IndicateInteractionPanel: {fileID: 8154789}
-  DistanciaParaInteracao: 4
 --- !u!114 &1644226542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,6 +2001,21 @@ MonoBehaviour:
   falaTexto: {fileID: 63810069}
   NomeFalante_Text: {fileID: 743226851}
   Falante_Image: {fileID: 271947680}
+  podeRepetir: 0
+  temImagemParaMostrar: 1
+--- !u!114 &1644226543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644226538}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04fbc5217279554499a0be71578b79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagemParaFadePanel: {fileID: 492507724}
 --- !u!1 &1663385042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,6 +2469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velAndar: 20
   forcaPulo: 7
+  maisPerto: {fileID: 0}
   PosInicial: {x: -2.28, y: -1.92, z: -1}
   IndicationInteractionPanel: {fileID: 8154789}
 --- !u!1 &1955989060
@@ -2635,6 +2587,8 @@ MonoBehaviour:
   falaTexto: {fileID: 63810069}
   NomeFalante_Text: {fileID: 743226851}
   Falante_Image: {fileID: 271947680}
+  podeRepetir: 1
+  temImagemParaMostrar: 0
 --- !u!61 &1955989065
 BoxCollider2D:
   m_ObjectHideFlags: 0
