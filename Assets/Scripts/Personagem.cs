@@ -8,8 +8,12 @@ public class Personagem : MonoBehaviour
     private Animator Anim;
     private bool estaNoChao;
     private bool movimentoPermitido;
+    private bool recebeuInputMover;
+    private bool recebeuInputPular;
+    private string lado;
     [SerializeField]
     private float velAndar;
+    private float velFinal = 0.0f;
     [SerializeField]
     private float forcaPulo;
     private bool interagindo;
@@ -35,55 +39,97 @@ public class Personagem : MonoBehaviour
 
     void Update()
     {
-        if (movimentoPermitido)
-        {
-            Movimento();
-            Pular();
-        }
+        ReceberInputs();
+
+        AnimacaoAndar();
 
         PertoDeInteragivel();
     }
 
-    void Movimento()
+    private void FixedUpdate()
     {
-        float velocidade;
-
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") > 0)
+        if(movimentoPermitido && recebeuInputMover && recebeuInputPular)
         {
-            velocidade = velAndar * 2;
+            Movimento(velFinal, lado);
+            Pular();
+            recebeuInputPular = false;
         }
-        else
+        else if (movimentoPermitido && recebeuInputMover)
         {
-            velocidade = velAndar;
+            Movimento(velFinal, lado);
         }
+        else if (movimentoPermitido && recebeuInputPular)
+        {
+            Pular();
+            recebeuInputPular = false;
+        }
+        else if (!recebeuInputMover)
+        {
+            Corpo.velocity = new Vector3(0, Corpo.velocity.y, 0);
+        }
+    }
 
+    void AnimacaoAndar()
+    {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            Anim.SetBool("Andar", true);
+            Anim.SetBool("Andando", true);
         }
         else
         {
-            Anim.SetBool("Andar", false);
+            Anim.SetBool("Andando", false);
         }
-
+    }
+    void ReceberInputs()
+    {
         if (Input.GetKey(KeyCode.A) || Input.GetAxis("Horizontal") > 0)
         {
-            transform.position = new Vector3(transform.position.x - (velocidade * Time.deltaTime), transform.position.y, transform.position.z);
-            //transform.localScale = new Vector2(-1, 1);
-            transform.localScale = new Vector3(1, 1, 1);
-            //lado = "Esquerda";
+            lado = "esquerda";
+            recebeuInputMover = true;
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetAxis("Horizontal") < 0)
         {
-            transform.position = new Vector3(transform.position.x + (velocidade * Time.deltaTime), transform.position.y, transform.position.z);
+            lado = "direita";
+            recebeuInputMover = true;
+        }
+        else
+        {
+            lado = "";
+            recebeuInputMover = false;
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") > 0)
+        {
+            velFinal = velAndar * 2;
+        }
+        else
+        {
+            velFinal = velAndar;
+        }
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0))
+        {
+            recebeuInputPular = true;
+        }
+    }
+
+    void Movimento(float velocidade, string lado)
+    {
+        if (lado == "direita")
+        {
+            Corpo.velocity = new Vector3(-velocidade, Corpo.velocity.y, 0);
             transform.localScale = new Vector3(1, 1, 1);
-            //lado = "Direita";
+        }
+        else if (lado == "esquerda")
+        {
+            Corpo.velocity = new Vector3(velocidade, Corpo.velocity.y, 0);
+            transform.localScale = new Vector3(1, 1, 1);
         }
 
     }
     void Pular()
     {
-        if (estaNoChao && (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0)))
+        if (estaNoChao)
         {
             Corpo.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
             estaNoChao = false;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteracaoParaFalas : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class InteracaoParaFalas : MonoBehaviour
     public bool jaFoi = false;
     public bool temImagemParaMostrar;
     private bool mostrandoImagem;
+    [SerializeField]
+    public bool teleportarDepois;
+    [SerializeField]
+    public int cenaParaIr;
 
     // Start is called before the first frame update
     void Start()
@@ -172,14 +177,21 @@ public class InteracaoParaFalas : MonoBehaviour
 
     void AcabouFalas()
     {
-        DialoguePanel.SetActive(false);
-        Player.GetComponent<Personagem>().DesprenderPersonagem();
-        Player.GetComponent<Personagem>().AcabouInteracao();
-        if (!podeRepetir)
+        if (teleportarDepois)
         {
-            jaFoi = true;
+            SceneManager.LoadScene(cenaParaIr);
         }
-        this.enabled = false;
+        else
+        {
+            DialoguePanel.SetActive(false);
+            Player.GetComponent<Personagem>().DesprenderPersonagem();
+            Player.GetComponent<Personagem>().AcabouInteracao();
+            if (!podeRepetir)
+            {
+                jaFoi = true;
+            }
+            this.enabled = false;
+        }
     }
 
     public void MostrouImagem()
