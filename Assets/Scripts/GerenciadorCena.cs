@@ -14,7 +14,7 @@ public class GerenciadorCena : MonoBehaviour
             ObjetoInicial.GetComponent<InteracaoParaFalas>().enabled = true;
         }
         // Deletar lingua depois
-        PlayerPrefs.SetInt("Lingua", 0);
+        
         
     }
 
