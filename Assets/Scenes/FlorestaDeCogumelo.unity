@@ -3633,7 +3633,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 731380433f639d7468fa4c0ff78c02a7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -28658,7 +28658,7 @@ MonoBehaviour:
   - {fileID: 0}
   pausaAntesDeFala: 00000000
   temposDasPausasAntesDasFalas:
-  - 2
+  - 1
   DialoguePanel: {fileID: 1473621883}
   falaTexto: {fileID: 946719734}
   NomeFalante_Text: {fileID: 1395872212}
@@ -28890,7 +28890,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 97a24b34b5231ed4393f1605e0de36e8, type: 3}
   pausaAntesDeFala: 00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   temposDasPausasAntesDasFalas:
-  - 2
+  - 1
   DialoguePanel: {fileID: 1473621883}
   falaTexto: {fileID: 946719734}
   NomeFalante_Text: {fileID: 1395872212}
@@ -28898,7 +28898,7 @@ MonoBehaviour:
   podeRepetir: 0
   jaFoi: 0
   temImagemParaMostrar: 0
-  teleportarDepois: 0
+  teleportarDepois: 1
   cenaParaIr: 9
   DragonEyes: {fileID: 0}
   Escama: {fileID: 0}
@@ -28907,7 +28907,7 @@ MonoBehaviour:
   PortaControlador: {fileID: 0}
   Mago: {fileID: 0}
   Anao: {fileID: 0}
-  Cogumelo: {fileID: 0}
+  Cogumelo: {fileID: 1412015478}
   Fada: {fileID: 26711865}
   Pedra: {fileID: 0}
   Maca: {fileID: 0}

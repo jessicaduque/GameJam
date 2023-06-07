@@ -123,131 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &67451335
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 67451336}
-  - component: {fileID: 67451338}
-  - component: {fileID: 67451337}
-  m_Layer: 0
-  m_Name: Porta
-  m_TagString: InteragivelFalas
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &67451336
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67451335}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.33, y: -1.52, z: -1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 316267907}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &67451337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67451335}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472d972621b10fb499bcd5cfb794e325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  en_falas: []
-  pt_falas: []
-  falantesDasFalas: 
-  en_falantes: []
-  pt_falantes: []
-  imagensFalantes: []
-  pausaAntesDeFala: 
-  temposDasPausasAntesDasFalas: []
-  DialoguePanel: {fileID: 0}
-  falaTexto: {fileID: 0}
-  NomeFalante_Text: {fileID: 0}
-  Falante_Image: {fileID: 0}
-  podeRepetir: 1
-  jaFoi: 0
-  temImagemParaMostrar: 0
-  teleportarDepois: 1
-  cenaParaIr: 6
-  DragonEyes: {fileID: 0}
-  Escama: {fileID: 0}
-  PortaPassada: {fileID: 0}
-  Porta: {fileID: 0}
-  PortaControlador: {fileID: 0}
-  Mago: {fileID: 0}
-  Anao: {fileID: 0}
-  Cogumelo: {fileID: 0}
-  Fada: {fileID: 0}
-  Pedra: {fileID: 0}
-  Maca: {fileID: 0}
---- !u!212 &67451338
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67451335}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &132887926
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132887926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.74, y: -1.52, z: -1}
+  m_LocalPosition: {x: -27.47, y: -1.52, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -391,195 +266,6 @@ MonoBehaviour:
   Fada: {fileID: 0}
   Pedra: {fileID: 0}
   Maca: {fileID: 0}
---- !u!1 &271188189
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 271188190}
-  - component: {fileID: 271188192}
-  - component: {fileID: 271188191}
-  m_Layer: 0
-  m_Name: Inicial
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &271188190
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271188189}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.9, y: -0.84, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 316267907}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &271188191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271188189}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472d972621b10fb499bcd5cfb794e325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  en_falas:
-  - "Stupid thing! There was no way this should\u2019ve gone wrong!"
-  - YOU!
-  - Me?
-  - YEAH, YOU RIGHT THERE!
-  - You have come in search of help, right! I can see it.
-  - How do you know?
-  - "I am the Mage of Mages, I know everything about everyone! I can cure your colds,
-    fix up your arm, and even find your love in seven\u2026 ah forget it."
-  - "You\u2019re the Mage of Mages? Doesn\u2019t look much like the image I saw on
-    the flier."
-  - "You think so? I don\u2019t see any difference\u2026 But that\u2019s not why
-    you\u2019re here, right? You have come to get help."
-  - "How did you guess? I\u2019ve come to-"
-  - "Shhhh, no need to say it, I already know. In fact, it\u2019s almost done."
-  - Really???
-  - Yes!
-  - But!
-  - I only need one more ingredient to finish the elixir e veeeery soon you shall
-    acquire what you desire!
-  - "Bring me a scale from the Ultra Mega Powerful Dragon that resides in the Monstrous
-    Cave that\u2019s in the forest behind this house."
-  - A skate?
-  - No! A scale. S-C-A-L-E.
-  - "Ya see that door behind me? It will always take you to the path you\u2019ll
-    need to follow."
-  - Now go!
-  - Enter the mysterious door.
-  pt_falas:
-  - "Coisa est\xFApida! N\xE3o tinha como dar errado!"
-  - "VOC\xCA!"
-  - Eu?
-  - "\xC9, VOC\xCA MESMO A\xCD!"
-  - "Veio procurando ajuda, n\xE9? Eu consigo ver."
-  - "Como voc\xEA sabe?"
-  - "Eu sou o Mago dos Magos, eu sei de tudo de todos! Curo sua gripe, conserto seu
-    bra\xE7o e trago seu amor em sete\u2026ah deixa para l\xE1."
-  - "Voc\xEA \xE9 o Mago dos Magos? N\xE3o parece muito com a imagem que eu vi no
-    poster."
-  - "Voc\xEA acha? Eu n\xE3o vejo diferen\xE7a\u2026 Mas n\xE3o \xE9 por isso que
-    voc\xEA est\xE1 aqui, certo? Voc\xEA veio atr\xE1s de ajuda."
-  - Como adivinhou? Eu vim aqui para-
-  - "Shhhh, n\xE3o precisa dizer, eu j\xE1 sei. Inclusive, j\xE1 est\xE1 quase pronto."
-  - "S\xE9rio???"
-  - Sim!
-  - "Por\xE9m!"
-  - "S\xF3 preciso de mais um ingrediente para concluir o elixir e j\xE1 j\xE1 voc\xEA
-    ter\xE1 o que voc\xEA deseja."
-  - "Traga uma escama do Drag\xE3o Ultra Mega Poderoso que reside na Caverna Monstruosa
-    que fica na floresta atr\xE1s daqui de casa."
-  - Uma esquema?
-  - "N\xE3o! Uma escama. ES-CA-MA."
-  - "T\xE1 vendo essa porta atr\xE1s de mim? Ela sempre levar\xE1 voc\xEA ao caminho
-    que precisar\xE1 seguir."
-  - "Agora v\xE1!"
-  - Entre pela porta misteriosa.
-  falantesDasFalas: 020000000200000000000000020000000200000000000000020000000000000002000000000000000200000000000000020000000200000002000000020000000000000002000000020000000200000001000000
-  en_falantes:
-  - Cooper
-  - 
-  - Mage of Mages
-  pt_falantes:
-  - Cooper
-  - 
-  - Mago dos Magos
-  imagensFalantes:
-  - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: 17b9b2ae5e5b8f749ad18aac0a31f6f3, type: 3}
-  pausaAntesDeFala: 00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-  temposDasPausasAntesDasFalas:
-  - 2
-  DialoguePanel: {fileID: 0}
-  falaTexto: {fileID: 0}
-  NomeFalante_Text: {fileID: 0}
-  Falante_Image: {fileID: 0}
-  podeRepetir: 0
-  jaFoi: 0
-  temImagemParaMostrar: 0
-  teleportarDepois: 0
-  cenaParaIr: 0
-  DragonEyes: {fileID: 0}
-  Escama: {fileID: 0}
-  PortaPassada: {fileID: 0}
-  Porta: {fileID: 0}
-  PortaControlador: {fileID: 0}
-  Mago: {fileID: 826801538}
-  Anao: {fileID: 0}
-  Cogumelo: {fileID: 0}
-  Fada: {fileID: 0}
-  Pedra: {fileID: 0}
-  Maca: {fileID: 0}
---- !u!212 &271188192
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271188189}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &316051101
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,39 +370,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &316267906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 316267907}
-  m_Layer: 0
-  m_Name: CuidadosDeFalas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &316267907
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 316267906}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 271188190}
-  - {fileID: 67451336}
-  m_Father: {fileID: 2141072645}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328127023
 GameObject:
   m_ObjectHideFlags: 3
@@ -1297,6 +950,9 @@ Transform:
   - {fileID: 1522889819}
   - {fileID: 1706863527}
   - {fileID: 632143969}
+  - {fileID: 1769210208}
+  - {fileID: 826801541}
+  - {fileID: 1024761002}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1587,12 +1243,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826801538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24, y: -1.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -26.52, y: -1.35, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141072645}
-  m_RootOrder: 0
+  m_Father: {fileID: 651156593}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859158343
 GameObject:
@@ -1781,8 +1437,8 @@ Transform:
   - {fileID: 468545261}
   - {fileID: 1552959430}
   - {fileID: 1379208173}
-  m_Father: {fileID: 2141072645}
-  m_RootOrder: 1
+  m_Father: {fileID: 651156593}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &1024761003
 Grid:
@@ -5047,8 +4703,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 826801541}
-  m_Follow: {fileID: 826801541}
+  m_LookAt: {fileID: 1769210208}
+  m_Follow: {fileID: 1769210208}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4
@@ -5167,6 +4823,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1769210207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769210208}
+  m_Layer: 0
+  m_Name: MEIOTELA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1769210208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769210207}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -24, y: -1.35, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 651156593}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881161751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5545,37 +5232,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967751308}
   m_CullTransparentMesh: 1
---- !u!1 &2141072644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2141072645}
-  m_Layer: 0
-  m_Name: "Cen\xE1rio (1)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2141072645
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141072644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 826801541}
-  - {fileID: 1024761002}
-  - {fileID: 316267907}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
