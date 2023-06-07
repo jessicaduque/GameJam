@@ -60,6 +60,10 @@ public class InteracaoParaFalas : MonoBehaviour
     private GameObject Pedra;
     [SerializeField]
     private GameObject Maca;
+    [SerializeField]
+    private GameObject Elixir1;
+    [SerializeField]
+    private GameObject Elixir2;
 
     // Start is called before the first frame update
     void Start()
@@ -266,6 +270,18 @@ public class InteracaoParaFalas : MonoBehaviour
         {
             LigarObjetosEspecificos("Maca");
         }
+        else if (falas[numeroFala] == "Mas antes, eu gostaria de fazer um discurs-" || falas[numeroFala] == "But before that, I’d like to give a speech-")
+        {
+            LigarObjetosEspecificos("Elixir1");
+        }
+        else if (falas[numeroFala] == "..........")
+        {
+            LigarObjetosEspecificos("Elixir2");
+        }
+        else if (falas[numeroFala] == "Deu certo?" || falas[numeroFala] == "Did it work?")
+        {
+            LigarObjetosEspecificos("DesligarElixir");
+        }
 
 
     }
@@ -316,6 +332,24 @@ public class InteracaoParaFalas : MonoBehaviour
         if (objeto == "Maca")
         {
             Maca.SetActive(false);
+        }
+
+        if (objeto == "Elixir1")
+        {
+            Elixir1.SetActive(true);
+        }
+
+        if (objeto == "Elixir2")
+        {
+            Elixir1.SetActive(false);
+            Elixir2.SetActive(true);
+
+        }
+
+        if (objeto == "DesligarElixir")
+        {
+            Elixir2.SetActive(false);
+
         }
 
     }
