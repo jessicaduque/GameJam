@@ -9,16 +9,24 @@ public class GerenciadorCena : MonoBehaviour
 
     void Start()
     {
-        ObjetoInicial.GetComponent<InteracaoParaFalas>().enabled = true;
+        if(ObjetoInicial != null)
+        {
+            ObjetoInicial.GetComponent<InteracaoParaFalas>().enabled = true;
+        }
         // Deletar lingua depois
         PlayerPrefs.SetInt("Lingua", 0);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
     }
 
     void Update()
     {
         
+    }
+
+    void TrancarMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 }

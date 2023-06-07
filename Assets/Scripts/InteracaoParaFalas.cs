@@ -42,6 +42,10 @@ public class InteracaoParaFalas : MonoBehaviour
     private GameObject DragonEyes;
     [SerializeField]
     private GameObject Escama;
+    [SerializeField]
+    private GameObject Porta;
+    [SerializeField]
+    private GameObject Mago;
 
     // Start is called before the first frame update
     void Start()
@@ -206,6 +210,19 @@ public class InteracaoParaFalas : MonoBehaviour
         {
             LigarObjetosEspecificos("Escama");
         }
+        else if (falas[numeroFala] == "Tá vendo essa porta atrás de mim? Ela sempre levará você ao caminho que precisará seguir." || falas[numeroFala] == "Ya see that door behind me? It will always take you to the path you’ll need to follow.")
+        {
+            LigarObjetosEspecificos("Porta");
+            Mago.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (falas[numeroFala] == "VOCÊ!" || falas[numeroFala] == "YOU!")
+        {
+            Mago.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if(falas[numeroFala] == "Agora vá!" || falas[numeroFala] == "Now go!")
+        {
+            Mago.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     void LigarObjetosEspecificos(string objeto)
@@ -218,6 +235,11 @@ public class InteracaoParaFalas : MonoBehaviour
         if(objeto == "Escama")
         {
             Escama.SetActive(false);
+        }
+
+        if (objeto == "Porta")
+        {
+            Porta.SetActive(true);
         }
     }
 

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Caverna.unity
     guid: 9e42dacee7ab09d469818b0ef80d08aa
+  - enabled: 1
+    path: Assets/Scenes/Casa1.unity
+    guid: 7ede353c9c2503942a266a2f3667ad84
   m_configObjects: {}

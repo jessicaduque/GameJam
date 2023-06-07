@@ -163,7 +163,7 @@ public class Personagem : MonoBehaviour
 
         foreach (GameObject interagivel in Interagiveis)
         {
-            if(Vector2.Distance(transform.position, interagivel.transform.position) <= 4)
+            if(Vector2.Distance(transform.position, interagivel.transform.position) <= 3)
             {
                 maisPerto = interagivel;
             }
