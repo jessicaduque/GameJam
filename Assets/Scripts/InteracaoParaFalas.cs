@@ -178,10 +178,13 @@ public class InteracaoParaFalas : MonoBehaviour
         if (mostrandoImagem)
         {
             Player.GetComponent<Personagem>().ComecouInteracao();
-            GetComponent<IniciarFadesImagem>().enabled = true;
-            if (!GetComponent<IniciarFadesImagem>().imagemParaFadePanel.activeSelf)
+            if(GetComponent<IniciarFadesImagem>() != null)
             {
-                mostrandoImagem = false;
+                GetComponent<IniciarFadesImagem>().enabled = true;
+                if (!GetComponent<IniciarFadesImagem>().imagemParaFadePanel.activeSelf)
+                {
+                    mostrandoImagem = false;
+                }
             }
         }
         else if(numeroFala == pt_falas.Count)
@@ -261,7 +264,7 @@ public class InteracaoParaFalas : MonoBehaviour
         {
             LigarObjetosEspecificos("Pedra");
         }
-        else if (falas[numeroFala] == "" || falas[numeroFala] == "")
+        else if (falas[numeroFala] == "Você adquiriu uma Maçã Dourada." || falas[numeroFala] == "You have acquired a Golden Apple.")
         {
             LigarObjetosEspecificos("Maca");
         }

@@ -2454,51 +2454,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   en_falas:
-  - HEY! YOU THERE!
-  - Take your filthy hands off my Golden Apple!
-  - Your Golden Apple?
-  - Yes, I, The Big Dwarf, saw it first, and so it is mine!
-  - Is there any other one for me?
-  - No! The Golden Apple is the only one existent in the whole world, and it is mine!
-  - Buuuuut, if you want it very badly, maybe we could make a trade.
-  - "You see, I\u2019ve lived up here my whole life."
-  - "And would you believe I\u2019m afraid of heights?! Pathetic huh\u2026"
-  - I heard about a marvelous item that exists on the surface.
-  - Something fantastic! Unique! Precious!
-  - What would that be?
-  - A ROG!
-  - Rog?
-  - YES! That marvelously solid thing, sometimes pointy and sometimes round.
-  - "I\u2019ve always lived here in the clouds, but never got a hold of one."
-  - "I think he\u2019s talking about a rock."
-  - "Ok then. I\u2019ll get one for you."
-  - Bring me one and I, the Big Dwarf, promise to hand you the Apple.
-  - Go down and get a rock.
+  - "Finally! I thought I\u2019d have to wait an eternity!"
+  - "I can\u2019t climb this Beanstalk that quickly."
+  - "I know! I called in Technician Support, and they\u2019re gonna come in next
+    week to install the elevator."
+  - "But let\u2019s talk about what matters. Where is it?! WHERE?!"
+  - "It\u2019s here."
+  - "Yeah! It\u2019s exactly as I imagined! I\u2019m almost crying from happiness!
+    Give it here!"
+  - You give the Big Dwarf the rock.
+  - So, what about the Apple?
+  - The dwarf seems too entertained by the common rock that you brought him.
+  - "It\u2019s best to just get the Apple and return to the Mage."
+  - You have acquired a Golden Apple.
   pt_falas:
-  - "EI! VOC\xCA A\xCD!"
-  - "Pode ir tirando suas m\xE3os sujas da minha Ma\xE7\xE3 Dourada!"
-  - "Sua Ma\xE7\xE3 Dourada?"
-  - "Sim, eu, O Grande An\xE3o, a vi primeiro, logo ela \xE9 minha!"
-  - Tem outra dessas para mim?
-  - "N\xE3o! A Ma\xE7\xE3 Dourada \xE9 \xFAnica, s\xF3 existe uma no mundo inteiro
-    e ela \xE9 minha!"
-  - "Maaaaas, se voc\xEA quiser muito ela mesmo, talvez eu possa fazer uma troca
-    com voc\xEA."
-  - "Voc\xEA v\xEA, eu moro aqui em cima a minha vida inteira."
-  - "E acredita que eu tenho medo de altura?! Pat\xE9tico n\xE9\u2026"
-  - "Ouvi falar de um item maravilhoso que existe na superf\xEDcie."
-  - "Algo fant\xE1stico! \xDAnico! Precioso!"
-  - O que seria?
-  - UMA PREGA!
-  - Prega?
-  - "SIM! Aquele neg\xF3cio maravilhosamente maci\xE7o, \xE0s vezes pontudo e \xE0s
-    vezes redondo."
-  - "Sempre morei aqui nas nuvens, por conta disso nunca botei as m\xE3os em uma."
-  - "Acho que ele quis dizer pedra\u2026"
-  - "Tudo bem. Eu irei buscar uma para voc\xEA."
-  - "Traga-me e eu, o Grande An\xE3o, prometo que te entregarei a Ma\xE7\xE3."
-  - "Des\xE7a e pegue uma pedra."
-  falantesDasFalas: 0200000002000000000000000200000000000000020000000200000002000000020000000200000002000000000000000200000000000000020000000200000000000000000000000200000001000000
+  - Finalmente! Achei que teria que esperar uma eternidade!
+  - "N\xE3o \xE9 muito r\xE1pido subir todo esse P\xE9 de Feij\xE3o."
+  - "Eu sei! O t\xE9cnico vai vir semana que vem instalar o elevador."
+  - "Mas vamos ao que interessa. Cad\xEA?! CAD\xCA??!"
+  - "T\xE1 aqui."
+  - "Isso! Era exatamente como eu imaginava! Quase estou chorando de felicidade!
+    Passe para c\xE1!"
+  - "Voc\xEA entrega a pedra ao Grande An\xE3o."
+  - "Ent\xE3o, e sobre a Ma\xE7\xE3?"
+  - "O an\xE3o parece muito entretido com a pedra comum que voc\xEA trouxe para ele."
+  - "\xC9 melhor apenas pegar a Ma\xE7\xE3 e voltar para o Mago."
+  - "Voc\xEA adquiriu uma Ma\xE7\xE3 Dourada."
+  falantesDasFalas: 0200000000000000020000000200000000000000020000000100000000000000010000000100000001000000
   en_falantes:
   - Cooper
   - 
@@ -2511,26 +2493,29 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
   - {fileID: 0}
   - {fileID: 21300000, guid: 292ed64b7972b21429bb3c6b274ac09c, type: 3}
-  pausaAntesDeFala: 00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  pausaAntesDeFala: 00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   temposDasPausasAntesDasFalas:
-  - 2
+  - 1
   DialoguePanel: {fileID: 417341553}
   falaTexto: {fileID: 223199103}
   NomeFalante_Text: {fileID: 1860782028}
   Falante_Image: {fileID: 1845969066}
-  podeRepetir: 1
+  podeRepetir: 0
   jaFoi: 0
   temImagemParaMostrar: 0
   teleportarDepois: 1
-  cenaParaIr: 0
+  cenaParaIr: 14
   DragonEyes: {fileID: 0}
   Escama: {fileID: 0}
   PortaPassada: {fileID: 0}
   Porta: {fileID: 0}
-  PortaControlador: {fileID: 938446259}
+  PortaControlador: {fileID: 0}
   Mago: {fileID: 0}
   Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
   Fada: {fileID: 0}
+  Pedra: {fileID: 0}
+  Maca: {fileID: 467928509}
 --- !u!212 &938446262
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2793,6 +2778,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personagem
       objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: PosInicial.x
+      value: -11.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: PosInicial.y
+      value: -1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830173147998072636, guid: 14eff36228a05324690f358953cd01a6, type: 3}
+      propertyPath: IndicationInteractionPanel
+      value: 
+      objectReference: {fileID: 497118469}
     - target: {fileID: 4830173147998072637, guid: 14eff36228a05324690f358953cd01a6, type: 3}
       propertyPath: m_RootOrder
       value: 0
