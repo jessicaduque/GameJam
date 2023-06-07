@@ -10,6 +10,7 @@ public class Personagem : MonoBehaviour
     private bool movimentoPermitido;
     private bool cooldownPularAtivado = false;
     private float cooldownPuloTempo = 0.0f;
+    private float velPulo = 7f;
     private bool recebeuInputMover;
     private bool recebeuInputPular;
     private string lado;
@@ -125,7 +126,7 @@ public class Personagem : MonoBehaviour
             velFinal = velAndar;
         }
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             recebeuInputPular = true;
         }
@@ -149,7 +150,7 @@ public class Personagem : MonoBehaviour
     {
         if (estaNoChao && !cooldownPularAtivado)
         {
-            Corpo.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
+            Corpo.velocity = new Vector2(Corpo.velocity.x, velPulo);
             estaNoChao = false;
         }
     }

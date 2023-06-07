@@ -25277,6 +25277,8 @@ MonoBehaviour:
   cenaParaIr: 0
   DragonEyes: {fileID: 0}
   Escama: {fileID: 0}
+  Porta: {fileID: 0}
+  Mago: {fileID: 0}
 --- !u!1 &1120582960
 GameObject:
   m_ObjectHideFlags: 0
