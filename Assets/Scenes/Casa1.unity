@@ -2111,7 +2111,7 @@ GameObject:
   - component: {fileID: 1138781654}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Chao
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
