@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GerenciadorCena : MonoBehaviour
 {
-    private GameObject Player;
     [SerializeField]
     private GameObject ObjetoInicial;
 
@@ -13,6 +12,8 @@ public class GerenciadorCena : MonoBehaviour
         ObjetoInicial.GetComponent<InteracaoParaFalas>().enabled = true;
         // Deletar lingua depois
         PlayerPrefs.SetInt("Lingua", 0);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
