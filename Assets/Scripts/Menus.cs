@@ -13,8 +13,18 @@ public class Menus : MonoBehaviour
 
     public void ComecarJogo()
     {
+        SceneManager.LoadScene(3);
+    }
+    public void Configuracoes()
+    {
         SceneManager.LoadScene(1);
     }
+
+    public void Creditos()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 
     public void SairJogo()
     {

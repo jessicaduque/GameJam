@@ -64,7 +64,7 @@ public class InteracaoParaFalas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        numeroFala = 0;
     }
 
     private void OnEnable()
@@ -81,12 +81,10 @@ public class InteracaoParaFalas : MonoBehaviour
         if (temImagemParaMostrar)
         {
             mostrandoImagem = true;
-            DialoguePanel.SetActive(false);
         }
         else
         {
             mostrandoImagem = false;
-            DialoguePanel.SetActive(true);
         }
     }
 

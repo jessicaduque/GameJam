@@ -210,6 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26711867}
   - component: {fileID: 26711866}
+  - component: {fileID: 26711868}
   m_Layer: 0
   m_Name: Fairy
   m_TagString: Untagged
@@ -258,7 +259,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 1599475504, guid: b4604cbf95e99904cae2af90fb856016, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -284,6 +285,26 @@ Transform:
   m_Father: {fileID: 1357001752}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &26711868
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26711865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7f7a7fba5e9098439ccff10bf2ef517, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &100716717
 GameObject:
   m_ObjectHideFlags: 0
@@ -28656,6 +28677,8 @@ MonoBehaviour:
   Anao: {fileID: 0}
   Cogumelo: {fileID: 0}
   Fada: {fileID: 0}
+  Pedra: {fileID: 0}
+  Maca: {fileID: 0}
 --- !u!1 &1120582960
 GameObject:
   m_ObjectHideFlags: 0
@@ -28886,6 +28909,8 @@ MonoBehaviour:
   Anao: {fileID: 0}
   Cogumelo: {fileID: 0}
   Fada: {fileID: 26711865}
+  Pedra: {fileID: 0}
+  Maca: {fileID: 0}
 --- !u!212 &1271196540
 SpriteRenderer:
   m_ObjectHideFlags: 0
