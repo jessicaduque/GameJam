@@ -37,6 +37,12 @@ public class InteracaoParaFalas : MonoBehaviour
     [SerializeField]
     public int cenaParaIr;
 
+    // Objetos específicos
+    [SerializeField]
+    private GameObject DragonEyes;
+    [SerializeField]
+    private GameObject Escama;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -87,8 +93,9 @@ public class InteracaoParaFalas : MonoBehaviour
             falas = en_falas;
             falantes = en_falantes;
         }
-        
-        
+
+        ControleDosObjetosEspecificos(falas);
+
         if(imagensFalantes[falantesDasFalas[numeroFala]] == null)
         {
             Falante_Image.enabled = false;
@@ -186,6 +193,31 @@ public class InteracaoParaFalas : MonoBehaviour
                 DialoguePanel.SetActive(true);
                 ScriptFalas();
             }
+        }
+    }
+
+    void ControleDosObjetosEspecificos(List<string> falas)
+    {
+        if (falas[numeroFala] == "EI!" || falas[numeroFala] == "HEY!")
+        {
+            LigarObjetosEspecificos("Dragão");
+        }
+        else if (falas[numeroFala] == "Você adquiriu uma escama da Senhora Dragão." || falas[numeroFala] == "You have acquired a scale from Ms. Dragon.")
+        {
+            LigarObjetosEspecificos("Escama");
+        }
+    }
+
+    void LigarObjetosEspecificos(string objeto)
+    {
+        if(objeto == "Dragão")
+        {
+            DragonEyes.SetActive(true);
+        }
+
+        if(objeto == "Escama")
+        {
+            Escama.SetActive(false);
         }
     }
 

@@ -22,8 +22,7 @@ public class Personagem : MonoBehaviour
 
     public GameObject maisPerto = null;
 
-    [SerializeField] 
-    private Vector3 PosInicial;
+    public Vector3 PosInicial;
 
     [SerializeField]
     GameObject IndicationInteractionPanel;

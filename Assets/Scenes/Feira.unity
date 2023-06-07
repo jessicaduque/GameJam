@@ -325,6 +325,8 @@ MonoBehaviour:
   temImagemParaMostrar: 0
   teleportarDepois: 0
   cenaParaIr: 0
+  DragonEyes: {fileID: 0}
+  Escama: {fileID: 0}
 --- !u!1 &63810067
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271947680
@@ -5642,6 +5644,8 @@ MonoBehaviour:
   temImagemParaMostrar: 0
   teleportarDepois: 0
   cenaParaIr: 0
+  DragonEyes: {fileID: 0}
+  Escama: {fileID: 0}
 --- !u!212 &1441035999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7579,6 +7583,8 @@ MonoBehaviour:
   temImagemParaMostrar: 1
   teleportarDepois: 1
   cenaParaIr: 4
+  DragonEyes: {fileID: 0}
+  Escama: {fileID: 0}
 --- !u!114 &1644226543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24387,6 +24393,8 @@ MonoBehaviour:
   temImagemParaMostrar: 0
   teleportarDepois: 0
   cenaParaIr: 0
+  DragonEyes: {fileID: 0}
+  Escama: {fileID: 0}
 --- !u!61 &1955989065
 BoxCollider2D:
   m_ObjectHideFlags: 0
