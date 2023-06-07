@@ -628,11 +628,16 @@ MonoBehaviour:
   jaFoi: 0
   temImagemParaMostrar: 0
   teleportarDepois: 1
-  cenaParaIr: 4
+  cenaParaIr: 7
   DragonEyes: {fileID: 1752262377}
   Escama: {fileID: 1343543387}
+  PortaPassada: {fileID: 0}
   Porta: {fileID: 0}
+  PortaControlador: {fileID: 0}
   Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
 --- !u!212 &289810309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -143259,8 +143264,13 @@ MonoBehaviour:
   cenaParaIr: 0
   DragonEyes: {fileID: 0}
   Escama: {fileID: 0}
+  PortaPassada: {fileID: 0}
   Porta: {fileID: 0}
+  PortaControlador: {fileID: 0}
   Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
 --- !u!212 &1823482629
 SpriteRenderer:
   m_ObjectHideFlags: 0

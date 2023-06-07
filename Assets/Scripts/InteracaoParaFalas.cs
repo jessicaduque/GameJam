@@ -37,7 +37,7 @@ public class InteracaoParaFalas : MonoBehaviour
     [SerializeField]
     public int cenaParaIr;
 
-    // Objetos específicos
+    // Objetos específicos (gambiarra da gambiarra - fazendo manualmente)
     [SerializeField]
     private GameObject DragonEyes;
     [SerializeField]
@@ -50,6 +50,16 @@ public class InteracaoParaFalas : MonoBehaviour
     private GameObject PortaControlador;
     [SerializeField]
     private GameObject Mago;
+    [SerializeField]
+    private GameObject Anao;
+    [SerializeField]
+    private GameObject Cogumelo;
+    [SerializeField]
+    private GameObject Fada;
+    [SerializeField]
+    private GameObject Pedra;
+    [SerializeField]
+    private GameObject Maca;
 
     // Start is called before the first frame update
     void Start()
@@ -229,15 +239,34 @@ public class InteracaoParaFalas : MonoBehaviour
         }
         else if (falas[numeroFala] == "Enfim! É só seguir pela mesma porta que você foi anteriormente." || falas[numeroFala] == "Anyways! Just go through the same door from before." || falas[numeroFala] == "Fique atento." || falas[numeroFala] == "Be aware.")
         {
-            PortaPassada.SetActive(false);
+            LigarObjetosEspecificos("PortaPassada");
         }
         else if (falas[numeroFala] == "Vê se não demora!" || falas[numeroFala] == "Try not to take long!" || falas[numeroFala] == "Encontre o Grande Pé de Feijão." || falas[numeroFala] == "Find the Big Beanstalk.")
         {
-            Porta.SetActive(true);
-            PortaControlador.SetActive(true);
+            LigarObjetosEspecificos("Porta");
+        }
+        else if (falas[numeroFala] == "EI! VOCÊ AÍ!" || falas[numeroFala] == "HEY! YOU THERE!")
+        {
+            LigarObjetosEspecificos("Anão");
+        }
+        else if (falas[numeroFala] == "Peraí peraí! O que você PENSA que está fazendo?" || falas[numeroFala] == "Wait wait! What do you THINK you’re doing?")
+        {
+            LigarObjetosEspecificos("Fada");
+        }
+        else if (falas[numeroFala] == "Você adquiriu o Cogumelo Sagrado." || falas[numeroFala] == "You have acquired the Sacred Mushroom.")
+        {
+            LigarObjetosEspecificos("Cogumelo");
+        }
+        else if (falas[numeroFala] == "Você adquiriu uma pedra." || falas[numeroFala] == "You have acquired a rock.")
+        {
+            LigarObjetosEspecificos("Pedra");
+        }
+        else if (falas[numeroFala] == "" || falas[numeroFala] == "")
+        {
+            LigarObjetosEspecificos("Maca");
         }
 
-        
+
     }
 
     void LigarObjetosEspecificos(string objeto)
@@ -255,7 +284,39 @@ public class InteracaoParaFalas : MonoBehaviour
         if (objeto == "Porta")
         {
             Porta.SetActive(true);
+            PortaControlador.SetActive(true);
         }
+
+        if (objeto == "PortaPassada")
+        {
+            PortaPassada.SetActive(false);
+        }
+
+        if (objeto == "Cogumelo")
+        {
+            Cogumelo.SetActive(false);
+        }
+
+        if (objeto == "Fada")
+        {
+            Fada.SetActive(true);
+        }
+
+        if (objeto == "Anão")
+        {
+            Anao.SetActive(true);
+        }
+
+        if (objeto == "Pedra")
+        {
+            Pedra.SetActive(false);
+        }
+
+        if (objeto == "Maca")
+        {
+            Maca.SetActive(false);
+        }
+
     }
 
     void AcabouFalas()

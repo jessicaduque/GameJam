@@ -1364,13 +1364,16 @@ MonoBehaviour:
   jaFoi: 0
   temImagemParaMostrar: 0
   teleportarDepois: 1
-  cenaParaIr: 0
+  cenaParaIr: 6
   DragonEyes: {fileID: 0}
   Escama: {fileID: 0}
   PortaPassada: {fileID: 0}
   Porta: {fileID: 0}
   PortaControlador: {fileID: 0}
   Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
 --- !u!1 &632143968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,6 +1626,9 @@ MonoBehaviour:
   Porta: {fileID: 1522889817}
   PortaControlador: {fileID: 0}
   Mago: {fileID: 1351276806}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
 --- !u!1 &798563375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4054,7 +4060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1522889818
 SpriteRenderer:
   m_ObjectHideFlags: 0

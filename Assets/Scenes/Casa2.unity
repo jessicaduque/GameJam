@@ -2431,6 +2431,9 @@ MonoBehaviour:
   Porta: {fileID: 0}
   PortaControlador: {fileID: 0}
   Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
 --- !u!1 &246471902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,13 +2954,16 @@ MonoBehaviour:
   jaFoi: 0
   temImagemParaMostrar: 0
   teleportarDepois: 1
-  cenaParaIr: 0
+  cenaParaIr: 8
   DragonEyes: {fileID: 0}
   Escama: {fileID: 0}
   PortaPassada: {fileID: 0}
   Porta: {fileID: 0}
   PortaControlador: {fileID: 0}
   Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
 --- !u!1 &632143968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,6 +3485,9 @@ MonoBehaviour:
   Porta: {fileID: 1706863526}
   PortaControlador: {fileID: 372365841}
   Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
 --- !u!1 &857570261
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,7 +4383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1349406831}
   m_Layer: 0
-  m_Name: "Cen\xE1rio (1)"
+  m_Name: "Cen\xE1rio"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4839,8 +4848,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -157363871, guid: 3667c12ffcfc7604f8cb10ca68c64464, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 1231198241, guid: 3667c12ffcfc7604f8cb10ca68c64464, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

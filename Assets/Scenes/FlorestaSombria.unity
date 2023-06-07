@@ -15524,6 +15524,215 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387220032}
   m_CullTransparentMesh: 1
+--- !u!1 &398416316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 398416317}
+  m_Layer: 0
+  m_Name: "Cen\xE1rio"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &398416317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398416316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.797358, y: 4.428386, z: -0.14073235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 872478009}
+  - {fileID: 437711842}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &437711841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437711842}
+  m_Layer: 0
+  m_Name: CuidadosDeFalas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &437711842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437711841}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.797358, y: -4.428386, z: 0.14073235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1370264607}
+  - {fileID: 452262041}
+  m_Father: {fileID: 398416317}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &452262040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 452262041}
+  - component: {fileID: 452262043}
+  - component: {fileID: 452262042}
+  m_Layer: 0
+  m_Name: Casa
+  m_TagString: InteragivelFalas
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &452262041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452262040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.3, y: -1.52, z: -1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 437711842}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &452262042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452262040}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472d972621b10fb499bcd5cfb794e325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  en_falas:
+  - ...
+  - "This is the only house I\u2019ve found since entering the forest. I\u2019ll
+    ask for information on how to get to that address."
+  - ...
+  - The door is open, and there are weird sounds of falling objects coming from it.
+  pt_falas:
+  - ...
+  - "\xC9 a \xFAnica casa que eu encontrei desde que entrei nessa floresta. Vou perguntar
+    por informa\xE7\xF5es de como chegar naquele endere\xE7o."
+  - ...
+  - "A porta est\xE1 aberta, e tem barulhos estranhos de coisas caindo saindo por
+    ela."
+  falantesDasFalas: 00000000000000000000000001000000
+  en_falantes:
+  - Cooper
+  - 
+  pt_falantes:
+  - Cooper
+  - 
+  imagensFalantes:
+  - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
+  - {fileID: 0}
+  pausaAntesDeFala: ffffffffffffffff02000000ffffffff
+  temposDasPausasAntesDasFalas:
+  - 0
+  - 0
+  - 2
+  DialoguePanel: {fileID: 387220032}
+  falaTexto: {fileID: 1336848180}
+  NomeFalante_Text: {fileID: 1203975701}
+  Falante_Image: {fileID: 1137849817}
+  podeRepetir: 1
+  jaFoi: 0
+  temImagemParaMostrar: 0
+  teleportarDepois: 1
+  cenaParaIr: 5
+  DragonEyes: {fileID: 0}
+  Escama: {fileID: 0}
+  PortaPassada: {fileID: 0}
+  Porta: {fileID: 0}
+  PortaControlador: {fileID: 0}
+  Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
+--- !u!212 &452262043
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452262040}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &454538610
 GameObject:
   m_ObjectHideFlags: 3
@@ -17327,8 +17536,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872478007}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.797358, y: -4.428386, z: 0.14073235}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17342,8 +17551,8 @@ Transform:
   - {fileID: 59177714}
   - {fileID: 2082104229}
   - {fileID: 1743550957}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 398416317}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1137849815
 GameObject:
@@ -18058,6 +18267,167 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1370264606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370264607}
+  - component: {fileID: 1370264610}
+  - component: {fileID: 1370264609}
+  - component: {fileID: 1370264608}
+  m_Layer: 0
+  m_Name: Placa
+  m_TagString: InteragivelFalas
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1370264607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370264606}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.02, y: -1.18, z: -1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 437711842}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1370264608
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370264606}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1370264609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370264606}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472d972621b10fb499bcd5cfb794e325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  en_falas:
+  - "This is the only path but it doesn\u2019t seem like what the Mage of Mages described
+    on the flier."
+  - "Hm\u2026 it\u2019s too late to go back now, once I find someone passing by here
+    I\u2019ll ask about the right way."
+  pt_falas:
+  - "Esse \xE9 o \xFAnico caminho mas n\xE3o parece nada com o que o Mago dos Magos
+    disse no papel."
+  - "Hm.. agora j\xE1 \xE9 tarde para voltar, assim que encontrar algu\xE9m passando
+    por aqui irei perguntar o caminho certo."
+  falantesDasFalas: 0000000000000000
+  en_falantes:
+  - Cooper
+  pt_falantes:
+  - Cooper
+  imagensFalantes:
+  - {fileID: 21300000, guid: f080039ccf4c7184e9cca62b13473296, type: 3}
+  pausaAntesDeFala: ffffffffffffffff
+  temposDasPausasAntesDasFalas: []
+  DialoguePanel: {fileID: 387220032}
+  falaTexto: {fileID: 1336848180}
+  NomeFalante_Text: {fileID: 1203975701}
+  Falante_Image: {fileID: 1137849817}
+  podeRepetir: 0
+  jaFoi: 0
+  temImagemParaMostrar: 0
+  teleportarDepois: 0
+  cenaParaIr: 0
+  DragonEyes: {fileID: 0}
+  Escama: {fileID: 0}
+  PortaPassada: {fileID: 0}
+  Porta: {fileID: 0}
+  PortaControlador: {fileID: 0}
+  Mago: {fileID: 0}
+  Anao: {fileID: 0}
+  Cogumelo: {fileID: 0}
+  Fada: {fileID: 0}
+--- !u!212 &1370264610
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370264606}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1438019591
 GameObject:
   m_ObjectHideFlags: 0
@@ -18123,14 +18493,6 @@ CompositeCollider2D:
       - X: 650000000
         Y: -150000000
     - - X: -320000000
-        Y: -30000000
-      - X: -310000000
-        Y: -30000000
-      - X: -310000000
-        Y: -20000000
-      - X: -320000000
-        Y: -20000000
-      - X: -320000000
         Y: 50000000
       - X: -480000000
         Y: 50000000
@@ -18145,10 +18507,6 @@ CompositeCollider2D:
       - {x: 54, y: 4.999971}
       - {x: 54.000034, y: -15}
     - - {x: -32.00003, y: -15}
-      - {x: -31.999971, y: -3}
-      - {x: -31, y: -2.999971}
-      - {x: -31.000029, y: -2}
-      - {x: -32, y: -1.9999707}
       - {x: -32.00003, y: 5}
       - {x: -48, y: 4.999971}
       - {x: -47.999973, y: -15}
