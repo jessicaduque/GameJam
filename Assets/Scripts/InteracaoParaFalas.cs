@@ -227,11 +227,11 @@ public class InteracaoParaFalas : MonoBehaviour
         {
             Mago.transform.localScale = new Vector3(1, 1, 1);
         }
-        else if (falas[numeroFala] == "Enfim! É só seguir pela mesma porta que você foi anteriormente." || falas[numeroFala] == "Anyways! Just go through the same door from before.")
+        else if (falas[numeroFala] == "Enfim! É só seguir pela mesma porta que você foi anteriormente." || falas[numeroFala] == "Anyways! Just go through the same door from before." || falas[numeroFala] == "Fique atento." || falas[numeroFala] == "Be aware.")
         {
             PortaPassada.SetActive(false);
         }
-        else if (falas[numeroFala] == "Vê se não demora!" || falas[numeroFala] == "Try not to take long!")
+        else if (falas[numeroFala] == "Vê se não demora!" || falas[numeroFala] == "Try not to take long!" || falas[numeroFala] == "Encontre o Grande Pé de Feijão." || falas[numeroFala] == "Find the Big Beanstalk.")
         {
             Porta.SetActive(true);
             PortaControlador.SetActive(true);
