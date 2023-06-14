@@ -178,7 +178,7 @@ public class Personagem : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.JoystickButton3))
+                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton3))
                 {
                     maisPerto.GetComponent<InteracaoParaFalas>().enabled = true;
                 }
