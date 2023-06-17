@@ -10,7 +10,6 @@ public class Personagem : MonoBehaviour
     private bool movimentoPermitido;
     private bool cooldownPularAtivado = false;
     private float cooldownPuloTempo = 0.0f;
-    private float velPulo = 7f;
     private bool recebeuInputMover;
     private bool recebeuInputPular;
     private string lado;
@@ -150,7 +149,7 @@ public class Personagem : MonoBehaviour
     {
         if (estaNoChao && !cooldownPularAtivado)
         {
-            Corpo.velocity = new Vector2(Corpo.velocity.x, velPulo);
+            Corpo.velocity = new Vector2(Corpo.velocity.x, forcaPulo);
             estaNoChao = false;
         }
     }
@@ -197,6 +196,10 @@ public class Personagem : MonoBehaviour
         if (colidiu.gameObject.tag == "Chao")
         {
             estaNoChao = true;
+        }
+        else
+        {
+            estaNoChao = false;
         }
     }
 
