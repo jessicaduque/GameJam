@@ -7,12 +7,13 @@ public class Menus : MonoBehaviour
 {
     private void Start()
     {
-        // 0 para port, 1 para ing.
-        PlayerPrefs.SetInt("Lingua", 0);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
-
     public void ComecarJogo()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(3);
     }
     public void Configuracoes()

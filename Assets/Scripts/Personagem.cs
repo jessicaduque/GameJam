@@ -24,8 +24,7 @@ public class Personagem : MonoBehaviour
 
     public Vector3 PosInicial;
 
-    [SerializeField]
-    GameObject IndicationInteractionPanel;
+    private GameObject IndicationInteractionPanel;
 
     void Start()
     {
@@ -36,6 +35,8 @@ public class Personagem : MonoBehaviour
         Corpo = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         transform.position = PosInicial;
+
+        IndicationInteractionPanel = GameObject.FindGameObjectWithTag("PainelInteracao");
     }
 
     void Update()
@@ -54,7 +55,7 @@ public class Personagem : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(movimentoPermitido && recebeuInputMover && recebeuInputPular)
+        if (movimentoPermitido && recebeuInputMover && recebeuInputPular)
         {
             Movimento(velFinal, lado);
             Pular();
@@ -71,7 +72,7 @@ public class Personagem : MonoBehaviour
         }
         else if (!recebeuInputMover)
         {
-            Corpo.velocity = new Vector3(0, Corpo.velocity.y, 0);
+            Corpo.velocity = new Vector2(0, Corpo.velocity.y);
         }
     }
 
@@ -135,12 +136,12 @@ public class Personagem : MonoBehaviour
     {
         if (lado == "direita")
         {
-            Corpo.velocity = new Vector3(velocidade, Corpo.velocity.y, 0);
+            Corpo.velocity = new Vector2(velocidade, Corpo.velocity.y);
             transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (lado == "esquerda")
         {
-            Corpo.velocity = new Vector3(-velocidade, Corpo.velocity.y, 0);
+            Corpo.velocity = new Vector2(-velocidade, Corpo.velocity.y);
             transform.localScale = new Vector3(1, 1, 1);
         }
 
@@ -163,7 +164,7 @@ public class Personagem : MonoBehaviour
 
         foreach (GameObject interagivel in Interagiveis)
         {
-            if(Vector2.Distance(transform.position, interagivel.transform.position) <= 3)
+            if(Vector2.Distance(transform.position, interagivel.transform.position) <= 2)
             {
                 maisPerto = interagivel;
             }
@@ -181,13 +182,13 @@ public class Personagem : MonoBehaviour
                 {
                     maisPerto.GetComponent<InteracaoParaFalas>().enabled = true;
                 }
-                IndicationInteractionPanel.SetActive(true);
+                IndicationInteractionPanel.transform.GetChild(0).gameObject.SetActive(true);
             }
           
         }
         else
         {
-            IndicationInteractionPanel.SetActive(false);
+            IndicationInteractionPanel.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 
@@ -206,7 +207,7 @@ public class Personagem : MonoBehaviour
     public void PrenderPersonagem()
     {
         movimentoPermitido = false;
-        Corpo.velocity = new Vector3(0, Corpo.velocity.y, 0);
+        Corpo.velocity = new Vector2(0, Corpo.velocity.y);
         Anim.SetBool("Correndo", false);
         Anim.SetBool("Andando", false);
     }

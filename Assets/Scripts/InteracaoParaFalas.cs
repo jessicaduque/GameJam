@@ -23,6 +23,7 @@ public class InteracaoParaFalas : MonoBehaviour
     private bool falasRodando;
     private GameObject Player;
 
+    private GameObject TelaPretaPanel;
     public GameObject DialoguePanel;
     public Text falaTexto;
     public Text NomeFalante_Text;
@@ -36,6 +37,8 @@ public class InteracaoParaFalas : MonoBehaviour
     public bool teleportarDepois;
     [SerializeField]
     public int cenaParaIr;
+    [SerializeField]
+    private GameObject ondeOlhar;
 
     // Objetos específicos (gambiarra da gambiarra - fazendo manualmente)
     [SerializeField]
@@ -53,6 +56,8 @@ public class InteracaoParaFalas : MonoBehaviour
     [SerializeField]
     private GameObject Anao;
     [SerializeField]
+    private GameObject Vassoura;
+    [SerializeField]
     private GameObject Cogumelo;
     [SerializeField]
     private GameObject Fada;
@@ -69,12 +74,14 @@ public class InteracaoParaFalas : MonoBehaviour
     void Start()
     {
         numeroFala = 0;
+        TelaPretaPanel = GameObject.FindGameObjectWithTag("TelaPretaPanel");
     }
 
     private void OnEnable()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Player.GetComponent<Personagem>().PrenderPersonagem();
+        OlharParaAlgo();
         falaTexto.text = "";
         falasRodando = true;
         if (podeRepetir)
@@ -96,6 +103,21 @@ public class InteracaoParaFalas : MonoBehaviour
     void Update()
     {
         ControleFalas();
+    }
+
+    void OlharParaAlgo()
+    {
+        if(ondeOlhar != null)
+        {
+            if (ondeOlhar.transform.position.x > Player.transform.position.x)
+            {
+                Player.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else
+            {
+                Player.transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
     }
 
     void ScriptFalas()
@@ -262,6 +284,15 @@ public class InteracaoParaFalas : MonoBehaviour
         {
             LigarObjetosEspecificos("Cogumelo");
         }
+        /*
+        else if(falas[numeroFala] == "Isso!" || falas[numeroFala] == "This!")
+        {
+            LigarObjetosEspecificos("Vassoura1");
+        }
+        else if(falas[numeroFala] == "Ah, então você faz isso…" || falas[numeroFala] == "Ah, so you do that…")
+        {
+            LigarObjetosEspecificos("Vassoura2");
+        }*/
         else if (falas[numeroFala] == "Você adquiriu uma pedra." || falas[numeroFala] == "You have acquired a rock.")
         {
             LigarObjetosEspecificos("Pedra");
@@ -313,6 +344,15 @@ public class InteracaoParaFalas : MonoBehaviour
         {
             Cogumelo.SetActive(false);
         }
+        
+        if(objeto == "Vassoura1")
+        {
+            Vassoura.SetActive(true);
+        }
+        if (objeto == "Vassoura2")
+        {
+            Vassoura.SetActive(false);
+        }
 
         if (objeto == "Fada")
         {
@@ -349,7 +389,6 @@ public class InteracaoParaFalas : MonoBehaviour
         if (objeto == "DesligarElixir")
         {
             Elixir2.SetActive(false);
-
         }
 
     }
@@ -358,7 +397,8 @@ public class InteracaoParaFalas : MonoBehaviour
     {
         if (teleportarDepois)
         {
-            SceneManager.LoadScene(cenaParaIr);
+            TelaPretaPanel.GetComponent<TelaPretaFade>().enabled = true;
+            TelaPretaPanel.GetComponent<TelaPretaFade>().FadeIn(cenaParaIr);
         }
         else
         {
