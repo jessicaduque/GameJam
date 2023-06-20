@@ -56,7 +56,9 @@ public class InteracaoParaFalas : MonoBehaviour
     [SerializeField]
     private GameObject Anao;
     [SerializeField]
-    private GameObject Vassoura;
+    private Sprite Vassoura;
+    [SerializeField]
+    private Sprite Idle;
     [SerializeField]
     private GameObject Cogumelo;
     [SerializeField]
@@ -284,7 +286,6 @@ public class InteracaoParaFalas : MonoBehaviour
         {
             LigarObjetosEspecificos("Cogumelo");
         }
-        /*
         else if(falas[numeroFala] == "Isso!" || falas[numeroFala] == "This!")
         {
             LigarObjetosEspecificos("Vassoura1");
@@ -292,7 +293,7 @@ public class InteracaoParaFalas : MonoBehaviour
         else if(falas[numeroFala] == "Ah, então você faz isso…" || falas[numeroFala] == "Ah, so you do that…")
         {
             LigarObjetosEspecificos("Vassoura2");
-        }*/
+        }
         else if (falas[numeroFala] == "Você adquiriu uma pedra." || falas[numeroFala] == "You have acquired a rock.")
         {
             LigarObjetosEspecificos("Pedra");
@@ -347,11 +348,13 @@ public class InteracaoParaFalas : MonoBehaviour
         
         if(objeto == "Vassoura1")
         {
-            Vassoura.SetActive(true);
+            Player.GetComponent<SpriteRenderer>().sprite = Vassoura;
+            Player.GetComponent<Animator>().SetBool("Vassoura", true);
         }
         if (objeto == "Vassoura2")
         {
-            Vassoura.SetActive(false);
+            Player.GetComponent<SpriteRenderer>().sprite = Idle;
+            Player.GetComponent<Animator>().SetBool("Vassoura", false);
         }
 
         if (objeto == "Fada")
