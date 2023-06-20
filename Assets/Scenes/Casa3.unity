@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132887926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.47, y: -1.52, z: -1}
+  m_LocalPosition: {x: -26.68, y: -1.52, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1377,22 +1377,8 @@ MonoBehaviour:
   - {fileID: 1719888815, guid: a97181dea02fef24485dc781e11d2ebe, type: 3}
   - {fileID: 0}
   - {fileID: -1643415398, guid: a97181dea02fef24485dc781e11d2ebe, type: 3}
-  pausaAntesDeFala: 00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0e000000ffffffff
+  pausaAntesDeFala: 00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   temposDasPausasAntesDasFalas:
-  - 2
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
   - 2
   DialoguePanel: {fileID: 594837518}
   falaTexto: {fileID: 594837517}
