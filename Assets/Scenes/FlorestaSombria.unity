@@ -15273,6 +15273,7 @@ MonoBehaviour:
   Mago: {fileID: 0}
   Anao: {fileID: 0}
   Vassoura: {fileID: 0}
+  Idle: {fileID: 0}
   Cogumelo: {fileID: 0}
   Fada: {fileID: 0}
   Pedra: {fileID: 0}
@@ -18037,6 +18038,7 @@ MonoBehaviour:
   Mago: {fileID: 0}
   Anao: {fileID: 0}
   Vassoura: {fileID: 0}
+  Idle: {fileID: 0}
   Cogumelo: {fileID: 0}
   Fada: {fileID: 0}
   Pedra: {fileID: 0}
@@ -74213,7 +74215,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.5849056, g: 0.50434315, b: 0.58111644, a: 1}
+  m_Color: {r: 0.3773585, g: 0.28266287, b: 0.3726237, a: 1}
   m_Origin: {x: -46, y: -16, z: 0}
   m_Size: {x: 112, y: 44, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}

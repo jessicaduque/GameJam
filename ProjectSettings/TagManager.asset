@@ -8,6 +8,7 @@ TagManager:
   - InteragivelFalas
   - PainelInteracao
   - TelaPretaPanel
+  - Plataforma
   layers:
   - Default
   - TransparentFX
