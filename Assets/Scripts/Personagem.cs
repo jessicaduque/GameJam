@@ -19,6 +19,8 @@ public class Personagem : MonoBehaviour
     [SerializeField]
     private float forcaPulo;
     private bool interagindo;
+    private bool deuExitPe = false;
+    private bool deuEnterELiberado = false;
 
     public GameObject maisPerto = null;
 
@@ -40,7 +42,8 @@ public class Personagem : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
+
         ReceberInputs();
 
         AnimacaoAndar();
@@ -198,9 +201,50 @@ public class Personagem : MonoBehaviour
         {
             estaNoChao = true;
         }
+        else if (colidiu.gameObject.tag == "Plataforma")
+        {
+            if (deuEnterELiberado)
+            {
+                estaNoChao = true;
+            }
+            else
+            {
+                estaNoChao = false;
+            }
+        }
         else
         {
             estaNoChao = false;
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D colidiu)
+    {
+        if (colidiu.gameObject.tag == "Plataforma")
+        {
+            estaNoChao = false;
+            deuExitPe = true;
+            deuEnterELiberado = false;
+        }
+        else
+        {
+            deuExitPe = false;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D colidiu)
+    {
+        if (colidiu.gameObject.tag == "Plataforma")
+        {
+            if (deuExitPe)
+            {
+                deuEnterELiberado = true;
+                deuExitPe = false;
+            }
+            else
+            {
+                deuEnterELiberado = false;
+            }
         }
     }
 

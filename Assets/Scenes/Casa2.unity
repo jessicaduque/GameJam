@@ -2562,6 +2562,7 @@ MonoBehaviour:
   Mago: {fileID: 0}
   Anao: {fileID: 0}
   Vassoura: {fileID: 0}
+  Idle: {fileID: 0}
   Cogumelo: {fileID: 0}
   Fada: {fileID: 0}
   Pedra: {fileID: 0}
@@ -3237,6 +3238,7 @@ MonoBehaviour:
   Mago: {fileID: 0}
   Anao: {fileID: 0}
   Vassoura: {fileID: 0}
+  Idle: {fileID: 0}
   Cogumelo: {fileID: 0}
   Fada: {fileID: 0}
   Pedra: {fileID: 0}
@@ -3833,8 +3835,7 @@ MonoBehaviour:
   - "Certo\u2026. se voc\xEA diz n\xE9."
   - "Eu preciso do Cogumelo Sagrado que tem na Floresta M\xE1gica das Fadas. Ele
     \xE9 azul. Ou ser\xE1 que \xE9 roxo?"
-  - "Enfim! \xC9 s\xF3 seguir pela mesma porta que voc\xEA foi anteriormente. (MAGO)-V\xEA
-    se n\xE3o demora! "
+  - "Enfim! \xC9 s\xF3 seguir pela mesma porta que voc\xEA foi anteriormente."
   - "V\xEA se n\xE3o demora!"
   - "V\xE1 \xE0 Floresta M\xE1gica das Fadas."
   falantesDasFalas: 0200000000000000000000000200000000000000020000000100000002000000000000000000000002000000020000000000000002000000020000000200000001000000
@@ -3880,12 +3881,13 @@ MonoBehaviour:
   ondeOlhar: {fileID: 0}
   DragonEyes: {fileID: 0}
   Escama: {fileID: 0}
-  PortaPassada: {fileID: 0}
+  PortaPassada: {fileID: 1586241413}
   Porta: {fileID: 1706863526}
   PortaControlador: {fileID: 372365841}
   Mago: {fileID: 0}
   Anao: {fileID: 0}
   Vassoura: {fileID: 0}
+  Idle: {fileID: 0}
   Cogumelo: {fileID: 0}
   Fada: {fileID: 0}
   Pedra: {fileID: 0}
